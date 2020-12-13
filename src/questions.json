@@ -1,0 +1,1254 @@
+[
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I believe the God of the Bible is the only true God – Father, Son and Holy Spirit"
+    },
+    "type": "KNOW"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I believe nothing I do or have done can earn my salvation"
+    },
+    "type": "KNOW"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I believe the Bible has decisive authority over what I say and do"
+    },
+    "type": "KNOW"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I believe God is actively involved in my life"
+    },
+    "type": "KNOW"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I exist to know, love and serve God"
+    },
+    "type": "KNOW"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I desire Jesus to be first in my life"
+    },
+    "type": "KNOW"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I thank God daily for who he is and what he is doing in my life"
+    },
+    "type": "WALK"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I study the Bible to know God, the truth, and to find direction for my life"
+    },
+    "type": "WALK"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I seek to grow closer to God by listening to him in prayer"
+    },
+    "type": "WALK"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I seek to grow closer to God by listening to him in prayer"
+    },
+    "type": "WALK"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I am fully satisfied with all of who God made me to be"
+    },
+    "type": "WALK"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I believe that my existence has significance because God made me"
+    },
+    "type": "WALK"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I am not anxious about my life as I have an inner peace from God"
+    },
+    "type": "WALK"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I am willing to risk everything that is important in my life for Jesus Christ"
+    },
+    "type": "WALK"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I have inner contentment, even when things go wrong"
+    },
+    "type": "WALK"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I allow other Christians to hold me accountable for my actions"
+    },
+    "type": "RELATE"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I love the family God has given me and who he has made me to be"
+    },
+    "type": "RELATE"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I do not hold any grudges, resentment or bitterness toward any members of their family"
+    },
+    "type": "RELATE"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I treat everyone regardless of their gender, race and socioeconomic background with the same respect, dignity and love"
+    },
+    "type": "RELATE"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I am still willing to love, serve and pray for those who disappointed me"
+    },
+    "type": "RELATE"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I respect and honour all the members of their family regardless of their age, position, or wealth"
+    },
+    "type": "RELATE"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "God’s grace enables me to forgive people who have hurt me"
+    },
+    "type": "RELATE"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I am willing to put others first, regardless of whether or not I know them well"
+    },
+    "type": "RELATE"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I keep my composure, even when people or circumstances irritate me"
+    },
+    "type": "RELATE"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I control my tongue"
+    },
+    "type": "RELATE"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "Very Strongly Agree"
+        },
+        "score": 6
+      },
+      {
+        "text": {
+          "en": "Strongly Agree"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "Agree"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "Disagree"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "Strongly Disagree"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "Very Strongly Disagree"
+        },
+        "score": 1
+      }
+    ],
+    "text": {
+      "en": "I know and use my spiritual gifts to fulfil God’s purposes"
+    },
+    "type": "SERVE"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "1-2 times a year"
+        },
+        "score": 1.5
+      },
+      {
+        "text": {
+          "en": "Every few months"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "1-2 a month"
+        },
+        "score": 4.5
+      },
+      {
+        "text": {
+          "en": "Once a week or more"
+        },
+        "score": 6
+      }
+    ],
+    "text": {
+      "en": "I serve those in need through church or on my own"
+    },
+    "type": "SERVE"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "I give as I am able"
+        },
+        "score": 1.5
+      },
+      {
+        "text": {
+          "en": "I am working toward giving 10% (tithing)"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "I am giving 10% (tithing)"
+        },
+        "score": 4.5
+      },
+      {
+        "text": {
+          "en": "I am giving beyond 10% (tithing)"
+        },
+        "score": 6
+      }
+    ],
+    "text": {
+      "en": "I am currently giving in my current financial contribution level to this church or ministries outside"
+    },
+    "type": "SERVE"
+  },
+  {
+    "options": [
+      {
+        "text": {
+          "en": "None"
+        },
+        "score": 1
+      },
+      {
+        "text": {
+          "en": "At least 1-2"
+        },
+        "score": 2
+      },
+      {
+        "text": {
+          "en": "At least 3-5"
+        },
+        "score": 3
+      },
+      {
+        "text": {
+          "en": "At least 6-10"
+        },
+        "score": 4
+      },
+      {
+        "text": {
+          "en": "At least 10-15"
+        },
+        "score": 5
+      },
+      {
+        "text": {
+          "en": "More than 15 times"
+        },
+        "score": 6
+      }
+    ],
+    "text": {
+      "en": "I engage non-Christians in meaningful spiritual conversations over the past year (Include conversations about spiritual issues, times when you shared gospel or shared your testimony, or times when they asked texts and tried to learn about the other person’s spiritual journey)"
+    },
+    "type": "SHARE"
+  }
+]
