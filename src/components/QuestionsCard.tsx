@@ -19,7 +19,11 @@ export function QuestionsCard(props: QuestionsCardProps): JSX.Element {
     <Card>
       <CardHeader subheader={`${getScore(questionType)} points`} title={`${questionType} Questions`}/>
       <CardContent>
-        {QuestionsList(questions, language, handleChange)}
+        <QuestionsList
+          handleChange={handleChange}
+          language={language}
+          questions={questions}
+        />
       </CardContent>
     </Card>
   );
