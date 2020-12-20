@@ -3,10 +3,11 @@ import { FormControlLabel, Radio, RadioGroup } from '@material-ui/core';
 import { ChangeEvent, useState } from 'react';
 import { getText } from '../types/Text';
 
-function createOption(option: Option, language: string) {
+function createOption(option: Option, index: number, language: string) {
   return (
     <FormControlLabel
       control={<Radio/>}
+      key={index}
       label={getText(option.text, language)}
       labelPlacement='top'
       value={getText(option.text, language)}
@@ -21,7 +22,7 @@ export function Options(options: Option[], language: string) {
     setValue(event.target.value);
   };
 
-  const mapOption = (option: Option) => createOption(option, language);
+  const mapOption = (option: Option, index: number) => createOption(option, index, language);
 
   return (
     <RadioGroup aria-label="options" name="options" onChange={handleChange} row value={value}>
