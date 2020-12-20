@@ -4,11 +4,19 @@ import { getText } from '../types/Text';
 import { Choices } from './Choices';
 import { UpdateAnswerHandler } from '../types/UpdateAnswerHandler';
 
-export function QuestionForm(question: Question, index: number, language: string, handleChange: UpdateAnswerHandler): JSX.Element {
+interface QuestionFormProps {
+  handleChange: UpdateAnswerHandler;
+  language: string;
+  question: Question;
+  questionIndex: number;
+}
+
+export function QuestionForm(props: QuestionFormProps): JSX.Element {
+  const { handleChange, language, question, questionIndex } = props;
   return (
     <FormControl
       component={Card}
-      key={`${question.type}-${index}`}
+      key={`${question.type}-${questionIndex}`}
       required
     >
       <FormLabel required>{getText(question.text, language)}</FormLabel>
@@ -17,7 +25,7 @@ export function QuestionForm(question: Question, index: number, language: string
         language={language}
         handleChange={handleChange}
         questionType={question.type}
-        questionIndex={index}
+        questionIndex={questionIndex}
       />
     </FormControl>
   );

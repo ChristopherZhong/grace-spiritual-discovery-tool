@@ -13,7 +13,13 @@ export function QuestionsList(props: QuestionsListProps): JSX.Element {
   const { handleChange, language, questions } = props;
   return (
     <List component='ol'>
-      {questions.map((question, index) => QuestionForm(question, index, language, handleChange))}
+      {questions.map((question, index) =>
+        <QuestionForm
+          handleChange={handleChange}
+          language={language}
+          question={question}
+          questionIndex={index}
+        />)}
     </List>
   );
 }
