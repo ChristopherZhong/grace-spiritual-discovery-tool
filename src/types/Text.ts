@@ -7,7 +7,7 @@ export function getText(text: Text, language: string): string {
   if (!result) {
     const [first] = Object.keys(text);
     result = text[first];
-    console.warn(`The "${language}" language is not available for the "${result}" question; defaulting to the "${first}" language`);
+    console.warn(`The "${language}" language is not available for the "${result}" text; defaulting to the "${first}" language`);
   }
   return result;
 }
