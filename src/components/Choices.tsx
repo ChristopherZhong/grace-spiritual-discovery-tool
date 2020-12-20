@@ -1,33 +1,53 @@
 import { Choice } from '../types/Choice';
-import { FormControlLabel, Radio, RadioGroup } from '@material-ui/core';
-import { ChangeEvent, useState } from 'react';
+import { FormControlLabel, Radio, RadioGroup, Typography } from '@material-ui/core';
+import { ChangeEvent, Component } from 'react';
 import { getText } from '../types/Text';
+import { QuestionType } from '../types/QuestionType';
+import { UpdateAnswerHandler } from './Questions';
 
-function createChoice(choice: Choice, index: number, language: string) {
+function ChoiceFormControlLabel(choice: Choice, index: number, language: string): JSX.Element {
   const text = getText(choice.text, language);
+  const label = <Typography variant='body2'>{text}</Typography>;
+  const value = `${choice.points}`;
   return (
     <FormControlLabel
       control={<Radio/>}
       key={index}
-      label={text}
+      label={label}
       labelPlacement='top'
-      value={text}
+      value={value}
     />
   );
 }
 
-export function Choices(choices: Choice[], language: string) {
-  const [value, setValue] = useState('');
+interface ChoicesProps {
+  choices: Array<Choice>;
+  handleChange: UpdateAnswerHandler;
+  language: string;
+  questionType: QuestionType;
+  questionIndex: number;
+}
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value);
-  };
+export class Choices extends Component<ChoicesProps> {
+  constructor(props: ChoicesProps) {
+    super(props);
+  }
 
-  const mapChoice = (choice: Choice, index: number) => createChoice(choice, index, language);
-
-  return (
-    <RadioGroup aria-label="options" name="options" onChange={handleChange} row value={value}>
-      {choices.map(mapChoice)}
-    </RadioGroup>
-  );
+  render(): JSX.Element {
+    const { choices, handleChange, language, questionIndex, questionType } = this.props;
+    const mapChoice = (choice: Choice, index: number) => ChoiceFormControlLabel(choice, index, language);
+    return (
+      <RadioGroup
+        aria-label='choices'
+        name='choices'
+        onChange={(event: ChangeEvent<HTMLInputElement>) => {
+          console.log(`>>> Choices::render()::onChange(): index=${questionIndex} : ${event.target.value}`);
+          handleChange(questionType, questionIndex, Number(event.target.value));
+        }}
+        row
+      >
+        {choices.map(mapChoice)}
+      </RadioGroup>
+    );
+  }
 }
