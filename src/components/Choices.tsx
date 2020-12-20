@@ -1,10 +1,10 @@
-import { Option } from '../types/Option';
+import { Choice } from '../types/Choice';
 import { FormControlLabel, Radio, RadioGroup } from '@material-ui/core';
 import { ChangeEvent, useState } from 'react';
 import { getText } from '../types/Text';
 
-function createOption(option: Option, index: number, language: string) {
-  const text = getText(option.text, language);
+function createChoice(choice: Choice, index: number, language: string) {
+  const text = getText(choice.text, language);
   return (
     <FormControlLabel
       control={<Radio/>}
@@ -16,18 +16,18 @@ function createOption(option: Option, index: number, language: string) {
   );
 }
 
-export function Options(options: Option[], language: string) {
+export function Choices(choices: Choice[], language: string) {
   const [value, setValue] = useState('');
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
   };
 
-  const mapOption = (option: Option, index: number) => createOption(option, index, language);
+  const mapChoice = (choice: Choice, index: number) => createChoice(choice, index, language);
 
   return (
     <RadioGroup aria-label="options" name="options" onChange={handleChange} row value={value}>
-      {options.map(mapOption)}
+      {choices.map(mapChoice)}
     </RadioGroup>
   );
 }

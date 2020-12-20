@@ -1,6 +1,6 @@
 import { Text } from './Text'
 
-export interface Option {
+export interface Choice {
   text: Text
   score: number
 }

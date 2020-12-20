@@ -1,6 +1,6 @@
 [
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -44,7 +44,7 @@
     "type": "KNOW"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -88,7 +88,7 @@
     "type": "KNOW"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -132,7 +132,7 @@
     "type": "KNOW"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -176,7 +176,7 @@
     "type": "KNOW"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -220,7 +220,7 @@
     "type": "KNOW"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -264,7 +264,7 @@
     "type": "KNOW"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -308,7 +308,7 @@
     "type": "WALK"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -352,7 +352,7 @@
     "type": "WALK"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -396,7 +396,7 @@
     "type": "WALK"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -440,7 +440,7 @@
     "type": "WALK"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -484,7 +484,7 @@
     "type": "WALK"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -528,7 +528,7 @@
     "type": "WALK"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -572,7 +572,7 @@
     "type": "WALK"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -616,7 +616,7 @@
     "type": "WALK"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -660,7 +660,7 @@
     "type": "WALK"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -704,7 +704,7 @@
     "type": "RELATE"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -748,7 +748,7 @@
     "type": "RELATE"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -792,7 +792,7 @@
     "type": "RELATE"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -836,7 +836,7 @@
     "type": "RELATE"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -880,7 +880,7 @@
     "type": "RELATE"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -924,7 +924,7 @@
     "type": "RELATE"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -968,7 +968,7 @@
     "type": "RELATE"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -1012,7 +1012,7 @@
     "type": "RELATE"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -1056,7 +1056,7 @@
     "type": "RELATE"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -1100,7 +1100,7 @@
     "type": "RELATE"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "Very Strongly Agree"
@@ -1144,7 +1144,7 @@
     "type": "SERVE"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "1-2 times a year"
@@ -1176,7 +1176,7 @@
     "type": "SERVE"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "I give as I am able"
@@ -1208,7 +1208,7 @@
     "type": "SERVE"
   },
   {
-    "options": [
+    "choices": [
       {
         "text": {
           "en": "None"

@@ -1,9 +1,9 @@
 import { Text } from './Text'
 import { QuestionType } from './QuestionType'
-import { Option } from './Option'
+import { Choice } from './Choice'
 
 export interface Question {
-  options: Option[]
+  choices: Choice[]
   text: Text
   type: QuestionType
 }
