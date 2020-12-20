@@ -16,6 +16,7 @@ export function QuestionsList(props: QuestionsListProps): JSX.Element {
       {questions.map((question, index) =>
         <QuestionForm
           handleChange={handleChange}
+          key={`${question.type}-${index}`}
           language={language}
           question={question}
           questionIndex={index}

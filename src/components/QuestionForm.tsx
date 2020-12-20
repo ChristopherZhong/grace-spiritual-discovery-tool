@@ -16,7 +16,6 @@ export function QuestionForm(props: QuestionFormProps): JSX.Element {
   return (
     <FormControl
       component={Card}
-      key={`${question.type}-${questionIndex}`}
       required
     >
       <FormLabel required>{getText(question.text, language)}</FormLabel>
