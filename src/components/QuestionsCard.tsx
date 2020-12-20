@@ -1,8 +1,9 @@
 import { Card, CardContent, CardHeader } from '@material-ui/core';
-import { GetScore, UpdateAnswerHandler } from './Questions';
 import { Question } from '../types/Question';
 import { QuestionType } from '../types/QuestionType';
 import { QuestionsList } from './QuestionsList';
+import { UpdateAnswerHandler } from '../types/UpdateAnswerHandler';
+import { GetScore } from '../types/GetScore';
 
 interface QuestionsCardProps {
   getScore: GetScore;

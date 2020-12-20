@@ -3,6 +3,8 @@ import { Question } from '../types/Question';
 import { QuestionType } from '../types/QuestionType';
 import { Component } from 'react';
 import { QuestionsCard } from './QuestionsCard';
+import { UpdateAnswerHandler } from '../types/UpdateAnswerHandler';
+import { GetScore } from '../types/GetScore';
 
 const questions = questionsJson as Array<Question>;
 
@@ -10,14 +12,6 @@ interface QuestionsState {
   answersByType: Map<QuestionType, Array<number>>;
   questionsByType: Map<QuestionType, Array<Question>>;
   scoreByType: Map<QuestionType, number>;
-}
-
-export interface UpdateAnswerHandler {
-  (questionType: QuestionType, questionIndex: number, value: number): void;
-}
-
-export interface GetScore {
-  (questionType: QuestionType): number;
 }
 
 function initQuestionsByType(questions: Array<Question>): Map<QuestionType, Array<Question>> {

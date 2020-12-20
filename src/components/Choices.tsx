@@ -3,7 +3,7 @@ import { FormControlLabel, Radio, RadioGroup, Typography } from '@material-ui/co
 import { ChangeEvent, Component } from 'react';
 import { getText } from '../types/Text';
 import { QuestionType } from '../types/QuestionType';
-import { UpdateAnswerHandler } from './Questions';
+import { UpdateAnswerHandler } from '../types/UpdateAnswerHandler';
 
 function ChoiceFormControlLabel(choice: Choice, index: number, language: string): JSX.Element {
   const text = getText(choice.text, language);

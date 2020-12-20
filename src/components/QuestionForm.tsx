@@ -2,7 +2,7 @@ import { Question } from '../types/Question';
 import { Card, FormControl, FormLabel } from '@material-ui/core';
 import { getText } from '../types/Text';
 import { Choices } from './Choices';
-import { UpdateAnswerHandler } from './Questions';
+import { UpdateAnswerHandler } from '../types/UpdateAnswerHandler';
 
 export function QuestionForm(question: Question, index: number, language: string, handleChange: UpdateAnswerHandler): JSX.Element {
   return (
