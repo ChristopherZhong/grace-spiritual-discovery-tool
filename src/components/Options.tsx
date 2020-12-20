@@ -4,13 +4,14 @@ import { ChangeEvent, useState } from 'react';
 import { getText } from '../types/Text';
 
 function createOption(option: Option, index: number, language: string) {
+  const text = getText(option.text, language);
   return (
     <FormControlLabel
       control={<Radio/>}
       key={index}
-      label={getText(option.text, language)}
+      label={text}
       labelPlacement='top'
-      value={getText(option.text, language)}
+      value={text}
     />
   );
 }
