@@ -119,11 +119,12 @@ export class Questions extends Component<any, QuestionsState> {
       <div>
         {Object.values(QuestionType).map((questionType: QuestionType) =>
           <QuestionsCard
+            getScore={this.getScore}
+            handleChange={this.handleChange}
+            key={questionType}
+            language={'en'}
             questions={questions.filter((question) => question.type === questionType)}
             questionType={questionType}
-            language={'en'}
-            handleChange={this.handleChange}
-            getScore={this.getScore}
           />)}
       </div>
     );
