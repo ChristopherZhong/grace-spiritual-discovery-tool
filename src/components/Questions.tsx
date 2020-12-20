@@ -1,55 +1,10 @@
 import questionsJson from '../questions.json';
 import { Question } from '../types/Question';
 import { QuestionType } from '../types/QuestionType';
-import { Choices } from './Choices';
-import { Card, FormControl, FormLabel, List, Typography } from '@material-ui/core';
-import { getText } from '../types/Text';
 import { Component } from 'react';
+import { QuestionsCard } from './QuestionsCard';
 
 const questions = questionsJson as Array<Question>;
-
-function QuestionFormControl(question: Question, index: number, language: string, handleChange: UpdateAnswerHandler): JSX.Element {
-  return (
-    <FormControl
-      component={Card}
-      key={`${question.type}-${index}`}
-      required
-    >
-      <FormLabel required>{getText(question.text, language)}</FormLabel>
-      <Choices
-        choices={question.choices}
-        language={language}
-        handleChange={handleChange}
-        questionType={question.type}
-        questionIndex={index}
-      />
-    </FormControl>
-  );
-}
-
-function QuestionsList(questions: Array<Question>, language: string, handleChange: UpdateAnswerHandler): JSX.Element {
-  const mapQuestion = (question: Question, index: number) => QuestionFormControl(question, index, language, handleChange);
-  return (
-    <List component='ol'>
-      {questions.map(mapQuestion)}
-    </List>
-  );
-}
-
-function QuestionsByType(type: QuestionType, handleChange: UpdateAnswerHandler, getScore: GetScore): JSX.Element {
-  const filter: Array<Question> = questions.filter(value => value.type === type);
-  return (
-    <div>
-      <Typography>{type} Questions: ({getScore(type)})</Typography>
-      {QuestionsList(filter, 'en', handleChange)}
-    </div>
-  );
-}
-
-// const WalkQuestions = (handleChange: ChangeEventHandler<HTMLInputElement>) => createQuestionsBy(QuestionType.Walk, handleChange);
-// const RelateQuestions = (handleChange: ChangeEventHandler<HTMLInputElement>) => createQuestionsBy(QuestionType.Relate, handleChange);
-// const ServeQuestions = (handleChange: ChangeEventHandler<HTMLInputElement>) => createQuestionsBy(QuestionType.Serve, handleChange);
-// const ShareQuestions = (handleChange: ChangeEventHandler<HTMLInputElement>) => createQuestionsBy(QuestionType.Share, handleChange);
 
 interface QuestionsState {
   answersByType: Map<QuestionType, Array<number>>;
@@ -168,12 +123,14 @@ export class Questions extends Component<any, QuestionsState> {
   render(): JSX.Element {
     return (
       <div>
-        <p>Here is a list of questions</p>
-        {QuestionsByType(QuestionType.Know, this.handleChange, this.getScore)}
-        {QuestionsByType(QuestionType.Walk, this.handleChange, this.getScore)}
-        {QuestionsByType(QuestionType.Relate, this.handleChange, this.getScore)}
-        {QuestionsByType(QuestionType.Serve, this.handleChange, this.getScore)}
-        {QuestionsByType(QuestionType.Share, this.handleChange, this.getScore)}
+        {Object.values(QuestionType).map((questionType: QuestionType) =>
+          <QuestionsCard
+            questions={questions.filter((question) => question.type === questionType)}
+            questionType={questionType}
+            language={'en'}
+            handleChange={this.handleChange}
+            getScore={this.getScore}
+          />)}
       </div>
     );
   }
