@@ -29,10 +29,6 @@ interface ChoicesProps {
 }
 
 export class Choices extends Component<ChoicesProps> {
-  constructor(props: ChoicesProps) {
-    super(props);
-  }
-
   render(): JSX.Element {
     const { choices, handleChange, language, questionIndex, questionType } = this.props;
     const mapChoice = (choice: Choice, index: number) => ChoiceFormControlLabel(choice, index, language);
