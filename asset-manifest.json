@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/grace-spiritual-discovery-tool/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/grace-spiritual-discovery-tool/static/js/main.2daa8d77.chunk.js",
+    "main.js.map": "/grace-spiritual-discovery-tool/static/js/main.2daa8d77.chunk.js.map",
+    "runtime-main.js": "/grace-spiritual-discovery-tool/static/js/runtime-main.c988bd2b.js",
+    "runtime-main.js.map": "/grace-spiritual-discovery-tool/static/js/runtime-main.c988bd2b.js.map",
+    "static/js/2.273ee004.chunk.js": "/grace-spiritual-discovery-tool/static/js/2.273ee004.chunk.js",
+    "static/js/2.273ee004.chunk.js.map": "/grace-spiritual-discovery-tool/static/js/2.273ee004.chunk.js.map",
+    "static/js/3.c8bd1880.chunk.js": "/grace-spiritual-discovery-tool/static/js/3.c8bd1880.chunk.js",
+    "static/js/3.c8bd1880.chunk.js.map": "/grace-spiritual-discovery-tool/static/js/3.c8bd1880.chunk.js.map",
+    "index.html": "/grace-spiritual-discovery-tool/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/grace-spiritual-discovery-tool/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.273ee004.chunk.js.LICENSE.txt": "/grace-spiritual-discovery-tool/static/js/2.273ee004.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c988bd2b.js",
+    "static/js/2.273ee004.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.2daa8d77.chunk.js"
+  ]
+}
