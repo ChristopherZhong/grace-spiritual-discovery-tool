@@ -11,7 +11,7 @@ interface ChoiceProps {
   language: string;
 }
 
-function ChoiceFormControlLabel(props: ChoiceProps): JSX.Element {
+function ChoiceComponent(props: ChoiceProps): JSX.Element {
   const text = getText(props.choice.text, props.language);
   const label = <Typography variant='body2'>{text}</Typography>;
   const value = `${props.choice.points}`;
@@ -37,7 +37,7 @@ interface ChoicesProps {
 export class Choices extends Component<ChoicesProps> {
   render(): JSX.Element {
     const { choices, handleChange, language, questionIndex, questionType } = this.props;
-    const mapChoice = (choice: Choice, index: number) => <ChoiceFormControlLabel
+    const mapChoice = (choice: Choice, index: number) => <ChoiceComponent
       choice={choice}
       index={index}
       language={language}
