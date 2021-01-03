@@ -5,14 +5,20 @@ import { getText } from '../types/Text';
 import { QuestionType } from '../types/QuestionType';
 import { UpdateAnswerHandler } from '../types/UpdateAnswerHandler';
 
-function ChoiceFormControlLabel(choice: Choice, index: number, language: string): JSX.Element {
-  const text = getText(choice.text, language);
+interface ChoiceProps {
+  choice: Choice;
+  index: number;
+  language: string;
+}
+
+function ChoiceFormControlLabel(props: ChoiceProps): JSX.Element {
+  const text = getText(props.choice.text, props.language);
   const label = <Typography variant='body2'>{text}</Typography>;
-  const value = `${choice.points}`;
+  const value = `${props.choice.points}`;
   return (
     <FormControlLabel
       control={<Radio/>}
-      key={index}
+      key={props.index}
       label={label}
       labelPlacement='top'
       value={value}
@@ -31,7 +37,11 @@ interface ChoicesProps {
 export class Choices extends Component<ChoicesProps> {
   render(): JSX.Element {
     const { choices, handleChange, language, questionIndex, questionType } = this.props;
-    const mapChoice = (choice: Choice, index: number) => ChoiceFormControlLabel(choice, index, language);
+    const mapChoice = (choice: Choice, index: number) => <ChoiceFormControlLabel
+      choice={choice}
+      index={index}
+      language={language}
+    />;
     return (
       <RadioGroup
         aria-label='choices'
