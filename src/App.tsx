@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { Questions } from './components/Questions';
+import { Container } from '@material-ui/core';
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
       <header className="App-header">
         Grace Spiritual Discovery Tool
       </header>
-      <Questions/>
+      <Container>
+        <Questions/>
+      </Container>
     </div>
   );
 }
