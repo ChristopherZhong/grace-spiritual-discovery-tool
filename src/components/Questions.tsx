@@ -3,7 +3,6 @@ import { Question } from '../types/Question';
 import { QuestionType } from '../types/QuestionType';
 import { useState } from 'react';
 import { UpdateAnswerHandler } from '../types/UpdateAnswerHandler';
-import { GetScore } from '../types/GetScore';
 import { Grid } from '@material-ui/core';
 import { ParsedQuestion } from '../types/ParsedQuestion';
 import { QuestionCard } from './QuestionCard';
@@ -14,9 +13,9 @@ interface QuestionsState {
   questions: Array<ParsedQuestion>;
 }
 
-function sum(previousValue: number, currentValue: number): number {
-  return previousValue + currentValue;
-}
+// function sum(previousValue: number, currentValue: number): number {
+//   return previousValue + currentValue;
+// }
 
 function parse(value: Question, index: number) {
   console.debug(`>>> Questions::() : index=${index}, value=${JSON.stringify(value)}`);
@@ -29,7 +28,6 @@ function parse(value: Question, index: number) {
 
 export function Questions(): JSX.Element {
   console.log(`Loading ${questions.length} questions ...`);
-
   let initialState: QuestionsState = {
     questions: questions.map(parse),
   };
@@ -37,20 +35,23 @@ export function Questions(): JSX.Element {
 
   let [state, setState] = useState<QuestionsState>(initialState);
 
-  let getScore: GetScore = (questionType: QuestionType) => {
-    console.debug(`>>> Questions::getScore() : questionType=${questionType}`);
-    state.questions.filter((value, index) => value.question.type === questionType);
-    // const score = state.scoreByType.get(questionType);
-    // if (score === undefined) {
-    //   console.warn(`Something went wrong! get(${questionType}) should return a number`);
-    //   return 0;
-    // }
-    // console.debug(`>>> Questions::getScore() : score=${score}`);
-    return 0;
-  };
+  // let getScore: GetScore = (questionType: QuestionType) => {
+  //   console.debug(`>>> Questions::getScore() : questionType=${questionType}`);
+  //   state.questions.filter((value, index) => value.question.type === questionType);
+  //   // const score = state.scoreByType.get(questionType);
+  //   // if (score === undefined) {
+  //   //   console.warn(`Something went wrong! get(${questionType}) should return a number`);
+  //   //   return 0;
+  //   // }
+  //   // console.debug(`>>> Questions::getScore() : score=${score}`);
+  //   return 0;
+  // };
 
   let handleChange: UpdateAnswerHandler = (questionType: QuestionType, questionIndex: number, value: number) => {
     console.debug(`>>> Questions::handleChange() : questionType=${questionType}, questionIndex=${questionIndex}, value=${value}`);
+    setState(prevState => {
+      return prevState;
+    });
     // let answers: Array<number> | undefined = state.answersByType.get(questionType);
     // if (answers === undefined) {
     //   console.warn(`Something went wrong! 'get(${questionType})' should return an array`);
@@ -86,7 +87,7 @@ export function Questions(): JSX.Element {
       {state.questions.map((value) =>
         <Grid item key={value.index} zeroMinWidth>
           <QuestionCard
-            getScore={getScore}
+            // getScore={getScore}
             handleChange={handleChange}
             key={value.index}
             language={'en'}
