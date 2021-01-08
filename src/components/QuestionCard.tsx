@@ -5,7 +5,6 @@ import { getText } from '../types/Text';
 import { Choices } from './Choices';
 
 interface QuestionCardProps {
-  // getScore: GetScore;
   handleChange: UpdateAnswerHandler;
   language: string;
   question: ParsedQuestion;
@@ -18,16 +17,14 @@ export function QuestionCard(props: QuestionCardProps): JSX.Element {
       <CardHeader title={`Question ${question.index}.`}/>
       <FormControl required>
         <CardContent>
-          <FormLabel required>{getText(question.question.text, language)}</FormLabel>
+          <FormLabel required>{getText(question.text, language)}</FormLabel>
         </CardContent>
         <CardActionArea>
           <CardActions>
             <Choices
-              choices={question.question.choices}
               language={language}
               handleChange={handleChange}
-              questionType={question.question.type}
-              questionIndex={question.index}
+              question={question}
             />
           </CardActions>
         </CardActionArea>

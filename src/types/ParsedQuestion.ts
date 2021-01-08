@@ -1,7 +1,6 @@
 import { Question } from './Question';
 
-export interface ParsedQuestion {
+export interface ParsedQuestion extends Question {
   answer: number;
   index: number;
-  question: Question;
 }

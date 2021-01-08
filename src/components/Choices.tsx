@@ -1,39 +1,39 @@
 import { Choice } from '../types/Choice';
 import { RadioGroup } from '@material-ui/core';
 import { ChangeEvent } from 'react';
-import { QuestionType } from '../types/QuestionType';
 import { UpdateAnswerHandler } from '../types/UpdateAnswerHandler';
 import { ChoiceRadio } from './ChoiceRadio';
+import { ParsedQuestion } from '../types/ParsedQuestion';
 
 interface ChoicesProps {
-  choices: Array<Choice>;
   handleChange: UpdateAnswerHandler;
   language: string;
-  questionType: QuestionType;
-  questionIndex: number;
+  question: ParsedQuestion;
 }
 
 export function Choices(props: ChoicesProps): JSX.Element {
-  const { choices, handleChange, language, questionIndex, questionType } = props;
-  const mapChoice = (choice: Choice, index: number) => (
-    <ChoiceRadio
-      choice={choice}
-      index={index}
-      key={index}
-      language={language}
-    />
-  );
+  const { handleChange, language, question } = props;
   return (
     <RadioGroup
       aria-label='choices'
       name='choices'
       onChange={(event: ChangeEvent<HTMLInputElement>) => {
-        console.debug(`>>> Choices::onChange(): index=${questionIndex} : ${event.target.value}`);
-        handleChange(questionType, questionIndex, Number(event.target.value));
+        const value: number = Number(event.target.value);
+        console.debug(`>>> Choices::onChange(): question.index=${question.index} : ${value}`);
+        handleChange(question, value);
       }}
       row
     >
-      {choices.map(mapChoice)}
+      {question.choices.map((choice: Choice, index: number) => {
+        return (
+          <ChoiceRadio
+            choice={choice}
+            index={index}
+            key={index}
+            language={language}
+          />
+        );
+      })}
     </RadioGroup>
   );
 }
