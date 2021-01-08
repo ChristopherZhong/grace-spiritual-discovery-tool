@@ -28,7 +28,6 @@ export function Results(props: ResultsProps): JSX.Element {
     console.log(`>>> type=${key}, value=${value}`)
     l.push(`${key} : ${value.current} / ${value.total}`)
   });
-  const [m, setM] = useState(map);
   return (
     <Card>
       <CardHeader title='Final results'/>
