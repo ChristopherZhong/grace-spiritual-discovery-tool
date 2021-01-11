@@ -1,8 +1,8 @@
-import { UpdateAnswerHandler } from '../types/UpdateAnswerHandler';
-import { ParsedQuestion } from '../types/ParsedQuestion';
+import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
+import { ParsedQuestion } from '../../types/ParsedQuestion';
 import { Card, CardActionArea, CardActions, CardContent, CardHeader, FormControl, FormLabel } from '@material-ui/core';
-import { getText } from '../types/Text';
-import { Choices } from './x-choices/Choices';
+import { getText } from '../../types/Text';
+import { Choices } from '../x-choices/Choices';
 
 interface QuestionCardProps {
   handleChange: UpdateAnswerHandler;
