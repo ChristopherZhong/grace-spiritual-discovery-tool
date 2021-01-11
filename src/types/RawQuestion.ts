@@ -4,8 +4,6 @@ import { Choice } from './Choice';
 import questionsJson from '../questions.json';
 import { ParsedQuestion } from './ParsedQuestion';
 
-const questions = questionsJson as Array<RawQuestion>;
-
 export interface RawQuestion {
   choices: Choice[]
   text: Text
@@ -24,8 +22,9 @@ function parse(value: RawQuestion, index: number): ParsedQuestion {
 }
 
 export function loadQuestions(): Array<ParsedQuestion> {
-  console.log(`Loading ${questions.length} questions ...`);
-  const parsedQuestions = questions.map(parse);
+  const rawQuestions = questionsJson as Array<RawQuestion>;
+  console.log(`Loading ${rawQuestions.length} questions ...`);
+  const parsedQuestions = rawQuestions.map(parse);
   console.debug(`>>> Questions::() : parsedQuestions=${JSON.stringify(parsedQuestions)}`);
   return parsedQuestions;
 }
