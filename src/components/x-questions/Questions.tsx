@@ -1,7 +1,7 @@
 import { Grid } from '@material-ui/core';
-import { ParsedQuestion } from '../types/ParsedQuestion';
-import { QuestionCard } from './x-question/QuestionCard';
-import { UpdateAnswerHandler } from '../types/UpdateAnswerHandler';
+import { ParsedQuestion } from '../../types/ParsedQuestion';
+import { QuestionCard } from '../x-question/QuestionCard';
+import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
 
 interface QuestionsProps {
   handleChange: UpdateAnswerHandler;
