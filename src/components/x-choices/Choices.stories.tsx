@@ -11,15 +11,47 @@ const Template: Story<ChoicesProps> = (args) => <Choices {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  handleChange: undefined,
+  handleChange: () => {},
   language: 'en',
   question: {
     answer: 0,
-    choices: [],
+    choices: [
+      {
+        points: 1,
+        text: {
+          'en': 'English (1)',
+          'ch': 'Chinese (1)',
+        },
+      },
+      {
+        points: 2,
+        text: {
+          'en': 'English (2)',
+          'ch': 'Chinese (2)',
+        },
+      },
+      {
+        points: 3,
+        text: {
+          'en': 'English (3)',
+          'ch': 'Chinese (3)',
+        },
+      },
+    ],
     index: 1,
-    text: {
-      'en': 'english text',
-    },
+    text: {},
     type: QuestionType.Walk,
   },
+};
+
+export const ChineseLanguage = Template.bind({});
+ChineseLanguage.args = {
+  ...Default.args,
+  language: 'ch',
+};
+
+export const MissingLanguage = Template.bind({});
+MissingLanguage.args = {
+  ...Default.args,
+  language: 'sp',
 };
