@@ -1,16 +1,16 @@
 import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
-import { Question } from '../../types/Question';
+import { Question as IQuestion } from '../../types/Question';
 import { Card, CardActionArea, CardActions, CardContent, CardHeader, FormControl, FormLabel } from '@material-ui/core';
 import { getText } from '../../types/Text';
 import { Choices } from '../x-choices/Choices';
 
-interface QuestionCardProps {
+interface QuestionProps {
   handleChange: UpdateAnswerHandler;
   language: string;
-  question: Question;
+  question: IQuestion;
 }
 
-export function QuestionCard(props: QuestionCardProps): JSX.Element {
+export function Question(props: QuestionProps): JSX.Element {
   const { handleChange, language, question } = props;
   const [text, found] = getText(question.text, language);
   return (

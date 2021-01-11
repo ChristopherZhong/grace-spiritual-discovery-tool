@@ -1,12 +1,12 @@
 import { Grid } from '@material-ui/core';
-import { Question } from '../../types/Question';
-import { QuestionCard } from '../x-question/QuestionCard';
+import { Question as IQuestion } from '../../types/Question';
+import { Question } from '../x-question/Question';
 import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
 
 interface QuestionsProps {
   handleChange: UpdateAnswerHandler;
   language: string;
-  questions: Array<Question>;
+  questions: Array<IQuestion>;
 }
 
 export function Questions(props: QuestionsProps): JSX.Element {
@@ -21,7 +21,7 @@ export function Questions(props: QuestionsProps): JSX.Element {
     >
       {questions.map((question) =>
         <Grid item key={question.index} zeroMinWidth>
-          <QuestionCard
+          <Question
             handleChange={handleChange}
             key={question.index}
             language={language}
