@@ -1,9 +1,9 @@
 import { Card, CardContent, CardHeader } from '@material-ui/core';
 import { QuestionType } from '../../types/QuestionType';
-import { ParsedQuestion } from '../../types/ParsedQuestion';
+import { Question } from '../../types/Question';
 
 interface ResultsProps {
-  questions: Array<ParsedQuestion>;
+  questions: Array<Question>;
   // scores: Map<QuestionType, number>;
 }
 

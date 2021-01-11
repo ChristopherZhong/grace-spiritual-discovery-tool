@@ -4,7 +4,7 @@ import { Questions } from './components/x-questions/Questions';
 import { Container, Typography } from '@material-ui/core';
 import { Results } from './components/x-results/Results';
 import { UpdateAnswerHandler } from './types/UpdateAnswerHandler';
-import { ParsedQuestion } from './types/ParsedQuestion';
+import { Question } from './types/Question';
 import { loadQuestions } from './types/RawQuestion';
 
 const questions = loadQuestions();
@@ -12,7 +12,7 @@ const questions = loadQuestions();
 function App() {
   const [state, setState] = useState(questions);
 
-  const handleChange: UpdateAnswerHandler = (question: ParsedQuestion, value: number) => {
+  const handleChange: UpdateAnswerHandler = (question: Question, value: number) => {
     console.log(`>>> Questions::handleChange() : question=${JSON.stringify(question)}`);
     console.log(`>>> Questions::handleChange() : value=${value}`);
     setState((prevQuestions) => {

@@ -2,12 +2,12 @@ import { RadioGroup } from '@material-ui/core';
 import { ChangeEvent } from 'react';
 import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
 import { Choice } from '../x-choice/Choice';
-import { ParsedQuestion } from '../../types/ParsedQuestion';
+import { Question } from '../../types/Question';
 
 export interface ChoicesProps {
   handleChange: UpdateAnswerHandler;
   language: string;
-  question: ParsedQuestion;
+  question: Question;
 }
 
 export function Choices(props: ChoicesProps): JSX.Element {

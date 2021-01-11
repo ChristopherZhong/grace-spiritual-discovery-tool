@@ -1,5 +1,5 @@
-import { ParsedQuestion } from './ParsedQuestion';
+import { Question } from './Question';
 
 export interface UpdateAnswerHandler {
-  (question: ParsedQuestion, value: number): void;
+  (question: Question, value: number): void;
 }

@@ -1,12 +1,12 @@
 import { Grid } from '@material-ui/core';
-import { ParsedQuestion } from '../../types/ParsedQuestion';
+import { Question } from '../../types/Question';
 import { QuestionCard } from '../x-question/QuestionCard';
 import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
 
 interface QuestionsProps {
   handleChange: UpdateAnswerHandler;
   language: string;
-  questions: Array<ParsedQuestion>;
+  questions: Array<Question>;
 }
 
 export function Questions(props: QuestionsProps): JSX.Element {

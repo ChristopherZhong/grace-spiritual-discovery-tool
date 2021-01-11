@@ -1,5 +1,5 @@
 import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
-import { ParsedQuestion } from '../../types/ParsedQuestion';
+import { Question } from '../../types/Question';
 import { Card, CardActionArea, CardActions, CardContent, CardHeader, FormControl, FormLabel } from '@material-ui/core';
 import { getText } from '../../types/Text';
 import { Choices } from '../x-choices/Choices';
@@ -7,7 +7,7 @@ import { Choices } from '../x-choices/Choices';
 interface QuestionCardProps {
   handleChange: UpdateAnswerHandler;
   language: string;
-  question: ParsedQuestion;
+  question: Question;
 }
 
 export function QuestionCard(props: QuestionCardProps): JSX.Element {
