@@ -9,8 +9,8 @@ export interface ChoiceProps {
 }
 
 export function ChoiceRadio(props: ChoiceProps): JSX.Element {
-  const text = getText(props.choice.text, props.language);
-  const label = <Typography variant='body2'>{text}</Typography>;
+  const [text, found] = getText(props.choice.text, props.language);
+  const label = <Typography variant='body2'>{found ? '' : '*'}{text}</Typography>;
   const value = `${props.choice.points}`;
   return (
     <FormControlLabel

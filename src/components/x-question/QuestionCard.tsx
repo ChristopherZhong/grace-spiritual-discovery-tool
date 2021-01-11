@@ -12,12 +12,13 @@ interface QuestionCardProps {
 
 export function QuestionCard(props: QuestionCardProps): JSX.Element {
   const { handleChange, language, question } = props;
+  const [text, found] = getText(question.text, language);
   return (
     <Card>
       <CardHeader title={`Question ${question.index}.`}/>
       <FormControl required>
         <CardContent>
-          <FormLabel required>{getText(question.text, language)}</FormLabel>
+          <FormLabel required>{found ? '' : '*'}{text}</FormLabel>
         </CardContent>
         <CardActionArea>
           <CardActions>
