@@ -4,7 +4,7 @@ import { Card, CardActionArea, CardActions, CardContent, CardHeader, FormControl
 import { getText } from '../../types/Text';
 import { Choices } from '../x-choices/Choices';
 
-interface QuestionProps {
+export interface QuestionProps {
   handleChange: UpdateAnswerHandler;
   language: string;
   question: IQuestion;
