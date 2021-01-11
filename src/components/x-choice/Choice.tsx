@@ -1,15 +1,15 @@
-import { Choice } from '../../types/Choice';
+import { Choice as IChoice } from '../../types/Choice';
 import { getText } from '../../types/Text';
 import { FormControlLabel, Radio, Typography } from '@material-ui/core';
 
 export interface ChoiceProps {
-  choice: Choice;
+  choice: IChoice;
   index: number;
   labelPlacement?: 'end' | 'start' | 'top' | 'bottom';
   language: string;
 }
 
-export function ChoiceRadio(props: ChoiceProps): JSX.Element {
+export function Choice(props: ChoiceProps): JSX.Element {
   const [text, found] = getText(props.choice.text, props.language);
   const label = <Typography variant='body2'>{found ? '' : '*'}{text}</Typography>;
   const labelPlacement = props.labelPlacement?? 'top';

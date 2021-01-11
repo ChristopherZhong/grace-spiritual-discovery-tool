@@ -1,8 +1,7 @@
-import { Choice } from '../../types/Choice';
 import { RadioGroup } from '@material-ui/core';
 import { ChangeEvent } from 'react';
 import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
-import { ChoiceRadio } from '../x-choice/ChoiceRadio';
+import { Choice } from '../x-choice/Choice';
 import { ParsedQuestion } from '../../types/ParsedQuestion';
 
 export interface ChoicesProps {
@@ -24,9 +23,9 @@ export function Choices(props: ChoicesProps): JSX.Element {
       }}
       row
     >
-      {question.choices.map((choice: Choice, index: number) => {
+      {question.choices.map((choice, index) => {
         return (
-          <ChoiceRadio
+          <Choice
             choice={choice}
             index={index}
             key={index}

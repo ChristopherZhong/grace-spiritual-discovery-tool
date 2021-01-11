@@ -1,12 +1,12 @@
-import { ChoiceProps, ChoiceRadio } from './ChoiceRadio';
+import { Choice, ChoiceProps } from './Choice';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
 export default {
-  component: ChoiceRadio,
+  component: Choice,
   title: 'Choice',
 } as Meta;
 
-const Template: Story<ChoiceProps> = (args) => <ChoiceRadio {...args} />;
+const Template: Story<ChoiceProps> = (args) => <Choice {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
