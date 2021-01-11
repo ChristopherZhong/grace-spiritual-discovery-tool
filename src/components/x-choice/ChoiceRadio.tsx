@@ -1,8 +1,8 @@
-import { Choice } from '../types/Choice';
-import { getText } from '../types/Text';
+import { Choice } from '../../types/Choice';
+import { getText } from '../../types/Text';
 import { FormControlLabel, Radio, Typography } from '@material-ui/core';
 
-interface ChoiceProps {
+export interface ChoiceProps {
   choice: Choice;
   index: number;
   language: string;

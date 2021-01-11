@@ -2,7 +2,7 @@ import { Choice } from '../types/Choice';
 import { RadioGroup } from '@material-ui/core';
 import { ChangeEvent } from 'react';
 import { UpdateAnswerHandler } from '../types/UpdateAnswerHandler';
-import { ChoiceRadio } from './ChoiceRadio';
+import { ChoiceRadio } from './x-choice/ChoiceRadio';
 import { ParsedQuestion } from '../types/ParsedQuestion';
 
 interface ChoicesProps {
