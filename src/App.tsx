@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { Questions } from './components/x-questions/Questions';
 import { Container, Typography } from '@material-ui/core';
-import { Results } from './components/Results';
+import { Results } from './components/x-results/Results';
 import { UpdateAnswerHandler } from './types/UpdateAnswerHandler';
 import { ParsedQuestion } from './types/ParsedQuestion';
 import { loadQuestions } from './types/Question';
