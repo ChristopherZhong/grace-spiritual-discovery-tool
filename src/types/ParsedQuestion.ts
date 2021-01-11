@@ -1,6 +1,6 @@
-import { Question } from './Question';
+import { RawQuestion } from './RawQuestion';
 
-export interface ParsedQuestion extends Question {
+export interface ParsedQuestion extends RawQuestion {
   answer: number;
   index: number;
 }

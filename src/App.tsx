@@ -5,7 +5,7 @@ import { Container, Typography } from '@material-ui/core';
 import { Results } from './components/x-results/Results';
 import { UpdateAnswerHandler } from './types/UpdateAnswerHandler';
 import { ParsedQuestion } from './types/ParsedQuestion';
-import { loadQuestions } from './types/Question';
+import { loadQuestions } from './types/RawQuestion';
 
 const questions = loadQuestions();
 

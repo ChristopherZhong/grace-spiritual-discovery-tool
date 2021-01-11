@@ -4,15 +4,15 @@ import { Choice } from './Choice';
 import questionsJson from '../questions.json';
 import { ParsedQuestion } from './ParsedQuestion';
 
-const questions = questionsJson as Array<Question>;
+const questions = questionsJson as Array<RawQuestion>;
 
-export interface Question {
+export interface RawQuestion {
   choices: Choice[]
   text: Text
   type: QuestionType
 }
 
-function parse(value: Question, index: number): ParsedQuestion {
+function parse(value: RawQuestion, index: number): ParsedQuestion {
   console.debug(`>>> Questions::() : index=${index}, value=${JSON.stringify(value)}`);
   return {
     answer: 0,
