@@ -10,6 +10,7 @@ import { loadQuestions } from './types/RawQuestion';
 const questions = loadQuestions();
 
 function App() {
+  const [language, setLanguage] = useState('en');
   const [state, setState] = useState(questions);
 
   const handleChange: UpdateAnswerHandler = (question: Question, value: number) => {
@@ -35,10 +36,11 @@ function App() {
         <Typography>Questions</Typography>
         <Questions
           handleChange={handleChange}
-          language={'en'}
+          language={language}
           questions={state}
         />
         <Results
+          language={language}
           questions={state}
         />
       </Container>
