@@ -2,12 +2,12 @@ import { MultilingualText } from './MultilingualText';
 import stagesJson from '../assets/stages.json';
 
 export interface Stage {
-  description: MultilingualText
-  id: MultilingualText
-  name: MultilingualText
-  range: {
-    min: number
-    max: number
+  readonly description: MultilingualText
+  readonly id: MultilingualText
+  readonly name: MultilingualText
+  readonly range: {
+    readonly min: number
+    readonly max: number
   }
 }
 

@@ -1,5 +1,5 @@
 export interface MultilingualText {
-  [language: string]: string;
+  readonly [language: string]: string;
 }
 
 export function getText(text: MultilingualText, language: string): [string, boolean] {

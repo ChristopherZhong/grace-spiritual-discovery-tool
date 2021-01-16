@@ -5,9 +5,9 @@ import questionsJson from '../assets/questions.json';
 import { Question } from './Question';
 
 export interface RawQuestion {
-  choices: Choice[]
-  text: MultilingualText
-  type: QuestionType
+  readonly choices: Choice[]
+  readonly text: MultilingualText
+  readonly type: QuestionType
 }
 
 function parse(value: RawQuestion, index: number): Question {
