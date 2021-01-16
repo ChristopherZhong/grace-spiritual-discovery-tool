@@ -1,7 +1,7 @@
 import { Text } from './Text';
 import { QuestionType } from './QuestionType';
 import { Choice } from './Choice';
-import questionsJson from '../questions.json';
+import questionsJson from '../assets/questions.json';
 import { Question } from './Question';
 
 export interface RawQuestion {
