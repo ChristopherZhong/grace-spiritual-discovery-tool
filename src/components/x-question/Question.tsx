@@ -1,7 +1,7 @@
 import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
 import { Question as IQuestion } from '../../types/Question';
 import { Card, CardActionArea, CardActions, CardContent, CardHeader, FormControl, FormLabel } from '@material-ui/core';
-import { getText } from '../../types/Text';
+import { getText } from '../../types/MultilingualText';
 import { Choices } from '../x-choices/Choices';
 
 export interface QuestionProps {

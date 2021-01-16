@@ -1,6 +1,6 @@
-import { Text } from './Text';
+import { MultilingualText } from './MultilingualText';
 
 export interface Choice {
-  text: Text
+  text: MultilingualText
   points: number
 }

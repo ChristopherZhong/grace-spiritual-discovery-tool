@@ -1,5 +1,5 @@
 import { Choice as IChoice } from '../../types/Choice';
-import { getText } from '../../types/Text';
+import { getText } from '../../types/MultilingualText';
 import { FormControlLabel, Radio, Typography } from '@material-ui/core';
 
 export interface ChoiceProps {

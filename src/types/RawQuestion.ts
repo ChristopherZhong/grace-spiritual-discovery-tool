@@ -1,4 +1,4 @@
-import { Text } from './Text';
+import { MultilingualText } from './MultilingualText';
 import { QuestionType } from './QuestionType';
 import { Choice } from './Choice';
 import questionsJson from '../assets/questions.json';
@@ -6,7 +6,7 @@ import { Question } from './Question';
 
 export interface RawQuestion {
   choices: Choice[]
-  text: Text
+  text: MultilingualText
   type: QuestionType
 }
 

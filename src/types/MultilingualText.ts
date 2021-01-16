@@ -1,8 +1,8 @@
-export interface Text {
+export interface MultilingualText {
   [language: string]: string;
 }
 
-export function getText(text: Text, language: string): [string, boolean] {
+export function getText(text: MultilingualText, language: string): [string, boolean] {
   let result = text[language];
   const missing = !result;
   if (missing) {

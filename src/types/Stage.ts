@@ -1,5 +1,7 @@
+import { MultilingualText } from './MultilingualText';
+
 export interface Stage {
-  readonly description: Text
-  readonly id: Text
-  readonly name: Text
+  description: MultilingualText
+  id: MultilingualText
+  name: MultilingualText
 }
