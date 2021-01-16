@@ -14,7 +14,7 @@ Default.args = {
     points: 1,
     text: {
       'en': 'English text',
-      'ch': 'Chinese text',
+      'zh': 'Chinese text',
     },
   },
   index: 1,
@@ -24,13 +24,13 @@ Default.args = {
 export const ChineseLanguage = Template.bind({});
 ChineseLanguage.args = {
   ...Default.args,
-  language: 'ch',
+  language: 'zh',
 };
 
 export const MissingLanguage = Template.bind({});
 MissingLanguage.args = {
   ...Default.args,
-  language: 'sp',
+  language: 'es',
 };
 
 export const LabelPlacementBottom = Template.bind({});

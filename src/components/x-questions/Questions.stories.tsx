@@ -21,28 +21,28 @@ Default.args = {
           points: 1,
           text: {
             'en': 'English (1.1)',
-            'ch': 'Chinese (1.1)',
+            'zh': 'Chinese (1.1)',
           },
         },
         {
           points: 2,
           text: {
             'en': 'English (1.2)',
-            'ch': 'Chinese (1.2)',
+            'zh': 'Chinese (1.2)',
           },
         },
         {
           points: 3,
           text: {
             'en': 'English (1.3)',
-            'ch': 'Chinese (1.3)',
+            'zh': 'Chinese (1.3)',
           },
         },
       ],
       index: 1,
       text: {
         'en': 'English question (1) text',
-        'ch': 'Chinese question (1) text',
+        'zh': 'Chinese question (1) text',
       },
       type: QuestionType.Walk,
     },
@@ -53,28 +53,28 @@ Default.args = {
           points: 1,
           text: {
             'en': 'English (2.1)',
-            'ch': 'Chinese (2.1)',
+            'zh': 'Chinese (2.1)',
           },
         },
         {
           points: 2,
           text: {
             'en': 'English (2.2)',
-            'ch': 'Chinese (2.2)',
+            'zh': 'Chinese (2.2)',
           },
         },
         {
           points: 3,
           text: {
             'en': 'English (2.3)',
-            'ch': 'Chinese (2.3)',
+            'zh': 'Chinese (2.3)',
           },
         },
       ],
       index: 2,
       text: {
         'en': 'English question (2) text',
-        'ch': 'Chinese question (2) text',
+        'zh': 'Chinese question (2) text',
       },
       type: QuestionType.Know,
     },
@@ -85,28 +85,28 @@ Default.args = {
           points: 1,
           text: {
             'en': 'English (3.1)',
-            'ch': 'Chinese (3.1)',
+            'zh': 'Chinese (3.1)',
           },
         },
         {
           points: 2,
           text: {
             'en': 'English (3.2)',
-            'ch': 'Chinese (3.2)',
+            'zh': 'Chinese (3.2)',
           },
         },
         {
           points: 3,
           text: {
             'en': 'English (3.3)',
-            'ch': 'Chinese (3.3)',
+            'zh': 'Chinese (3.3)',
           },
         },
       ],
       index: 3,
       text: {
         'en': 'English question (3) text',
-        'ch': 'Chinese question (3) text',
+        'zh': 'Chinese question (3) text',
       },
       type: QuestionType.Serve,
     },
@@ -116,11 +116,11 @@ Default.args = {
 export const ChineseLanguage = Template.bind({});
 ChineseLanguage.args = {
   ...Default.args,
-  language: 'ch',
+  language: 'zh',
 };
 
 export const MissingLanguage = Template.bind({});
 MissingLanguage.args = {
   ...Default.args,
-  language: 'sp',
+  language: 'es',
 };

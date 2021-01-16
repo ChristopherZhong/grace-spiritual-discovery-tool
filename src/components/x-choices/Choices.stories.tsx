@@ -20,21 +20,21 @@ Default.args = {
         points: 1,
         text: {
           'en': 'English (1)',
-          'ch': 'Chinese (1)',
+          'zh': 'Chinese (1)',
         },
       },
       {
         points: 2,
         text: {
           'en': 'English (2)',
-          'ch': 'Chinese (2)',
+          'zh': 'Chinese (2)',
         },
       },
       {
         points: 3,
         text: {
           'en': 'English (3)',
-          'ch': 'Chinese (3)',
+          'zh': 'Chinese (3)',
         },
       },
     ],
@@ -47,11 +47,11 @@ Default.args = {
 export const ChineseLanguage = Template.bind({});
 ChineseLanguage.args = {
   ...Default.args,
-  language: 'ch',
+  language: 'zh',
 };
 
 export const MissingLanguage = Template.bind({});
 MissingLanguage.args = {
   ...Default.args,
-  language: 'sp',
+  language: 'es',
 };
