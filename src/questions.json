@@ -435,50 +435,6 @@
       }
     ],
     "text": {
-      "en": "I seek to grow closer to God by listening to him in prayer"
-    },
-    "type": "WALK"
-  },
-  {
-    "choices": [
-      {
-        "text": {
-          "en": "Very Strongly Agree"
-        },
-        "points": 6
-      },
-      {
-        "text": {
-          "en": "Strongly Agree"
-        },
-        "points": 5
-      },
-      {
-        "text": {
-          "en": "Agree"
-        },
-        "points": 4
-      },
-      {
-        "text": {
-          "en": "Disagree"
-        },
-        "points": 3
-      },
-      {
-        "text": {
-          "en": "Strongly Disagree"
-        },
-        "points": 2
-      },
-      {
-        "text": {
-          "en": "Very Strongly Disagree"
-        },
-        "points": 1
-      }
-    ],
-    "text": {
       "en": "I am fully satisfied with all of who God made me to be"
     },
     "type": "WALK"
@@ -787,7 +743,7 @@
       }
     ],
     "text": {
-      "en": "I do not hold any grudges, resentment or bitterness toward any members of their family"
+      "en": "I do not hold any grudges, resentment or bitterness toward any members of my family"
     },
     "type": "RELATE"
   },
