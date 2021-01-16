@@ -10,7 +10,7 @@ import { loadQuestions } from './types/RawQuestion';
 const questions = loadQuestions();
 
 function App() {
-  const [language, setLanguage] = useState('en');
+  const [language] = useState('en');
   const [state, setState] = useState(questions);
 
   const handleChange: UpdateAnswerHandler = (question: Question, value: number) => {
