@@ -3,7 +3,7 @@ import { Question as IQuestion } from '../../types/Question';
 import { Question } from '../x-question/Question';
 import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
 
-interface QuestionsProps {
+export interface QuestionsProps {
   handleChange: UpdateAnswerHandler;
   language: string;
   questions: Array<IQuestion>;
