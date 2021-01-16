@@ -1,6 +1,6 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { Question, QuestionProps } from './Question';
-import * as ChoicesStories from '../x-choices/Choices.stories';
+import { QuestionType } from '../../types/QuestionType';
 
 export default {
   component: Question,
@@ -14,11 +14,36 @@ Default.args = {
   handleChange: () => {},
   language: 'en',
   question: {
-    ...ChoicesStories.Default.args!.question!,
+    answer: 0,
+    choices: [
+      {
+        points: 1,
+        text: {
+          'en': 'English (1)',
+          'ch': 'Chinese (1)',
+        },
+      },
+      {
+        points: 2,
+        text: {
+          'en': 'English (2)',
+          'ch': 'Chinese (2)',
+        },
+      },
+      {
+        points: 3,
+        text: {
+          'en': 'English (3)',
+          'ch': 'Chinese (3)',
+        },
+      },
+    ],
+    index: 1,
     text: {
       'en': 'English question text',
       'ch': 'Chinese question text',
     },
+    type: QuestionType.Walk,
   },
 };
 
