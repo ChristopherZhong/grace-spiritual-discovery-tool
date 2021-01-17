@@ -3,16 +3,19 @@ import { Question } from './Question';
 
 export interface AreaScore {
   readonly area: QuestionType
-  current: number
-  total: number
+  readonly current: number
+  readonly total: number
 }
 
 export function computeScores(questions: ReadonlyArray<Question>): ReadonlyArray<AreaScore> {
   const map = new Map<QuestionType, AreaScore>();
   questions.forEach((question) => {
-    const score = map.get(question.type) ?? { area: question.type, current: 0, total: 0 };
-    score.current += question.answer;
-    score.total += question.choices.reduce((max, choice) => Math.max(max, choice.points), 0);
+    let score = map.get(question.type) ?? { area: question.type, current: 0, total: 0 };
+    score = {
+      area: score.area,
+      current: score.current + question.answer,
+      total: score.total + question.choices.reduce((max, choice) => Math.max(max, choice.points), 0),
+    };
     map.set(question.type, score);
   });
   return Array.from(map.values());
