@@ -3,10 +3,10 @@ import { getText } from '../../types/MultilingualText';
 import { FormControlLabel, Radio, Typography } from '@material-ui/core';
 
 export interface ChoiceProps {
-  choice: IChoice;
-  index: number;
-  labelPlacement?: 'end' | 'start' | 'top' | 'bottom';
-  language: string;
+  readonly choice: IChoice;
+  readonly index: number;
+  readonly labelPlacement?: 'end' | 'start' | 'top' | 'bottom';
+  readonly language: string;
 }
 
 export function Choice(props: ChoiceProps): JSX.Element {

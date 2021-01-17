@@ -4,9 +4,9 @@ import { Question } from '../x-question/Question';
 import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
 
 export interface QuestionsProps {
-  handleChange: UpdateAnswerHandler;
-  language: string;
-  questions: Array<IQuestion>;
+  readonly handleChange: UpdateAnswerHandler;
+  readonly language: string;
+  readonly questions: ReadonlyArray<IQuestion>;
 }
 
 export function Questions(props: QuestionsProps): JSX.Element {

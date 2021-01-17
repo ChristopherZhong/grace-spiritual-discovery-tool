@@ -3,8 +3,8 @@ import { getText } from '../../types/MultilingualText';
 import { Stage } from '../../types/Stage';
 
 export interface StageInfoProps {
-  language: string
-  stage: Stage
+  readonly language: string
+  readonly stage: Stage
 }
 
 export function StageInfo(props: StageInfoProps): JSX.Element {

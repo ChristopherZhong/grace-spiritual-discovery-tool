@@ -2,7 +2,7 @@ import { QuestionType } from './QuestionType';
 import { Question } from './Question';
 
 export interface AreaScore {
-  area: QuestionType
+  readonly area: QuestionType
   current: number
   total: number
 }

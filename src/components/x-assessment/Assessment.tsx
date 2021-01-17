@@ -8,8 +8,8 @@ import { EmailAssessmentButton } from '../x-email-assessment-button/EmailAssessm
 import { AreaScore, computeScores } from '../../types/AreaScore';
 
 export interface ResultsProps {
-  language: string
-  questions: Array<Question>;
+  readonly language: string
+  readonly questions: ReadonlyArray<Question>;
 }
 
 const stages = loadStages();

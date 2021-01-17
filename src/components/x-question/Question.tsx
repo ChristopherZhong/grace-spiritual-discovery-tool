@@ -5,9 +5,9 @@ import { getText } from '../../types/MultilingualText';
 import { Choices } from '../x-choices/Choices';
 
 export interface QuestionProps {
-  handleChange: UpdateAnswerHandler;
-  language: string;
-  question: IQuestion;
+  readonly handleChange: UpdateAnswerHandler;
+  readonly language: string;
+  readonly question: IQuestion;
 }
 
 export function Question(props: QuestionProps): JSX.Element {

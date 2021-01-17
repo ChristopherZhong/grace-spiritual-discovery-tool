@@ -5,9 +5,9 @@ import { Choice } from '../x-choice/Choice';
 import { Question } from '../../types/Question';
 
 export interface ChoicesProps {
-  handleChange: UpdateAnswerHandler;
-  language: string;
-  question: Question;
+  readonly handleChange: UpdateAnswerHandler;
+  readonly language: string;
+  readonly question: Question;
 }
 
 export function Choices(props: ChoicesProps): JSX.Element {
