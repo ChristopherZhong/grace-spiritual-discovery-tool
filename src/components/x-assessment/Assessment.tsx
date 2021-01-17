@@ -5,31 +5,16 @@ import { loadStages } from '../../types/Stage';
 import { getText } from '../../types/MultilingualText';
 import { StageInfo } from '../x-stage-info/StageInfo';
 import { EmailAssessmentButton } from '../x-email-assessment-button/EmailAssessmentButton';
+import { AreaScore, computeScores } from '../../types/AreaScore';
 
 export interface ResultsProps {
   language: string
   questions: Array<Question>;
 }
 
-interface Score {
-  current: number
-  total: number
-}
-
 const stages = loadStages();
 
-function computeScores(questions: ReadonlyArray<Question>): ReadonlyMap<QuestionType, Score> {
-  const map = new Map<QuestionType, Score>();
-  questions.forEach((value) => {
-    const score = map.get(value.type) ?? { current: 0, total: 0 };
-    score.current += value.answer;
-    score.total += value.choices.reduce((max, choice) => Math.max(max, choice.points), 0);
-    map.set(value.type, score);
-  });
-  return map;
-}
-
-function createComponent(scores: ReadonlyMap<QuestionType, Score>, language: string): ReadonlyArray<string> {
+function createComponent(scores: ReadonlyMap<QuestionType, AreaScore>, language: string): ReadonlyArray<string> {
   const results: Array<string> = [];
   scores.forEach((value, key) => {
     console.log(`>>> type=${key}, value=${value}`);
@@ -67,7 +52,7 @@ export function Assessment(props: ResultsProps): JSX.Element {
         {stages.map((stage, index) => <StageInfo key={index} language={language} stage={stage}/>)}
       </CardContent>
       <CardActions>
-        <EmailAssessmentButton/>
+        <EmailAssessmentButton scores={scores}/>
       </CardActions>
     </Card>
   );

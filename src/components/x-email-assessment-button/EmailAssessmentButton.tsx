@@ -1,8 +1,10 @@
-import { Button, CardActions } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import { Email } from '@material-ui/icons';
+import { QuestionType } from '../../types/QuestionType';
+import { AreaScore } from '../../types/AreaScore';
 
 export interface EmailAssessmentButtonProps {
-
+  scores: ReadonlyMap<QuestionType, AreaScore>
 }
 
 function mailto(
@@ -12,7 +14,7 @@ function mailto(
   return encodeURI(`mailto:?body=${body}&subject=${subject}`);
 }
 
-export function EmailAssessmentButton() {
+export function EmailAssessmentButton(props: EmailAssessmentButtonProps) {
   return (
     <Button
       href={mailto(
@@ -26,5 +28,5 @@ export function EmailAssessmentButton() {
     >
       Email Assessment
     </Button>
-  )
+  );
 }
