@@ -6,11 +6,6 @@ import { StageInfo } from '../x-stage-info/StageInfo';
 import { EmailAssessmentButton } from '../x-email-assessment-button/EmailAssessmentButton';
 import { AreaScore, computeScores } from '../../types/AreaScore';
 
-export interface ResultsProps {
-  readonly language: string
-  readonly questions: ReadonlyArray<Question>;
-}
-
 const stages = loadStages();
 
 function createComponent(scores: ReadonlyArray<AreaScore>, language: string): ReadonlyArray<string> {
@@ -35,7 +30,12 @@ function getStageName(percentage: number, language: string): string {
   return '';
 }
 
-export function Assessment(props: ResultsProps): JSX.Element {
+export interface AssessmentProps {
+  readonly language: string
+  readonly questions: ReadonlyArray<Question>;
+}
+
+export function Assessment(props: AssessmentProps): JSX.Element {
   const { language, questions } = props;
   const scores = computeScores(questions);
   const results = createComponent(scores, language);
