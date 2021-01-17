@@ -14,41 +14,47 @@ interface Score {
   total: number
 }
 
-const toPercent = (value: number): string => `${(value * 100).toFixed(2)}%`;
-
-function toStage(value: number): string {
-  if (value < .26)
-    return 'Exploring Christ';
-  if (value < .51)
-    return 'Growing in Christ';
-  if (value < .76)
-    return 'Close to Christ';
-  return 'Christ-Centred';
-}
-
 const stages = loadStages();
 
-export function Assessment(props: ResultsProps): JSX.Element {
-  const { language, questions } = props;
+function computeScores(questions: ReadonlyArray<Question>): ReadonlyMap<QuestionType, Score> {
   const map = new Map<QuestionType, Score>();
   questions.forEach((value) => {
-    let score = map.get(value.type);
-    if (score === undefined) {
-      score = {
-        current: 0,
-        total: 0,
-      };
-    }
+    const score = map.get(value.type) ?? { current: 0, total: 0 };
     score.current += value.answer;
     score.total += value.choices.reduce((max, choice) => Math.max(max, choice.points), 0);
     map.set(value.type, score);
   });
+  return map;
+}
+
+function createComponent(scores: ReadonlyMap<QuestionType, Score>, language: string): ReadonlyArray<string> {
   const results: Array<string> = [];
-  map.forEach((value, key) => {
+  scores.forEach((value, key) => {
     console.log(`>>> type=${key}, value=${value}`);
-    const score = value.current / value.total;
-    results.push(`${key} : ${value.current} / ${value.total} : ${toPercent(score)}: ${toStage(score)}`);
+    const percentage = toPercentage(value.current / value.total);
+    const stageName = getStageName(percentage, language);
+    results.push(`${key} : ${value.current} / ${value.total} : ${percentage}%: ${stageName}`);
   });
+  return results;
+}
+
+const toPercentage = (value: number): number => Math.round(value * 100);
+
+function getStageName(percentage: number, language: string): string {
+  const stage = stages.find((stage) => stage.range.min <= percentage && percentage <= stage.range.max);
+  console.debug(`>>> Assessment::getStageName(): percentage=${percentage}, stage=${JSON.stringify(stage)}`);
+  if (stage) {
+    const [text] = getText(stage.name, language);
+    return text;
+  }
+  console.warn(`Unable to find the correct stage for the given "${percentage}" value: ${JSON.stringify(stages)}`);
+  return '';
+}
+
+export function Assessment(props: ResultsProps): JSX.Element {
+  const { language, questions } = props;
+  const scores = computeScores(questions);
+  const results = createComponent(scores, language);
   return (
     <Card>
       <CardHeader title='Assessment Results'/>
