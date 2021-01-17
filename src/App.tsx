@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import { Questions } from './components/x-questions/Questions';
 import { Container, Typography } from '@material-ui/core';
-import { Results } from './components/x-results/Results';
+import { Assessment } from './components/x-assessment/Assessment';
 import { UpdateAnswerHandler } from './types/UpdateAnswerHandler';
 import { Question } from './types/Question';
 import { loadQuestions } from './types/RawQuestion';
@@ -39,7 +39,7 @@ function App() {
           language={language}
           questions={state}
         />
-        <Results
+        <Assessment
           language={language}
           questions={state}
         />

@@ -28,7 +28,7 @@ function toStage(value: number): string {
 
 const stages = loadStages();
 
-export function Results(props: ResultsProps): JSX.Element {
+export function Assessment(props: ResultsProps): JSX.Element {
   const { language, questions } = props;
   const map = new Map<QuestionType, Score>();
   questions.forEach((value) => {

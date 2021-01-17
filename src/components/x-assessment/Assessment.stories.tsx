@@ -1,13 +1,13 @@
 import { Meta, Story } from '@storybook/react/types-6-0';
-import { Results, ResultsProps } from './Results';
+import { Assessment, ResultsProps } from './Assessment';
 import { QuestionType } from '../../types/QuestionType';
 
 export default {
-  component: Results,
-  title: 'Results',
+  component: Assessment,
+  title: 'Assessment',
 } as Meta;
 
-const Template: Story<ResultsProps> = (args) => <Results {...args}/>;
+const Template: Story<ResultsProps> = (args) => <Assessment {...args}/>;
 
 export const Default = Template.bind({});
 Default.args = {
