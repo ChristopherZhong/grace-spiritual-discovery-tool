@@ -1,8 +1,9 @@
-import { Card, CardContent, CardHeader, Typography } from '@material-ui/core';
+import { Card, CardActions, CardContent, CardHeader } from '@material-ui/core';
 import { QuestionType } from '../../types/QuestionType';
 import { Question } from '../../types/Question';
 import { loadStages } from '../../types/Stage';
 import { getText } from '../../types/MultilingualText';
+import { StageInfo } from '../x-stage-info/StageInfo';
 
 export interface ResultsProps {
   language: string
@@ -62,34 +63,7 @@ export function Assessment(props: ResultsProps): JSX.Element {
         <ol>
           {results.map((value, index) => <li key={index}>{value}</li>)}
         </ol>
-        {stages.map((value, index) => (
-          <Card
-            key={index}
-            variant='outlined'
-          >
-            <CardContent>
-              <Typography
-                align='left'
-                color='textSecondary'
-                variant='body2'
-              >
-                {value.range.min}&ndash;{value.range.max}%
-              </Typography>
-              <Typography
-                align='left'
-                variant='subtitle1'
-              >
-                {getText(value.id, language)}: {getText(value.name, language)}
-              </Typography>
-              <Typography
-                align='left'
-                variant='body2'
-              >
-                {getText(value.description, language)}
-              </Typography>
-            </CardContent>
-          </Card>
-        ))}
+        {stages.map((stage, index) => <StageInfo key={index} language={language} stage={stage}/>)}
       </CardContent>
     </Card>
   );
