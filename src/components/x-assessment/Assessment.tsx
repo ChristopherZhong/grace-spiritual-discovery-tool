@@ -1,5 +1,4 @@
 import { Card, CardActions, CardContent, CardHeader } from '@material-ui/core';
-import { QuestionType } from '../../types/QuestionType';
 import { Question } from '../../types/Question';
 import { loadStages } from '../../types/Stage';
 import { getText } from '../../types/MultilingualText';
@@ -14,15 +13,13 @@ export interface ResultsProps {
 
 const stages = loadStages();
 
-function createComponent(scores: ReadonlyMap<QuestionType, AreaScore>, language: string): ReadonlyArray<string> {
-  const results: Array<string> = [];
-  scores.forEach((value, key) => {
-    console.log(`>>> type=${key}, value=${value}`);
+function createComponent(scores: ReadonlyArray<AreaScore>, language: string): ReadonlyArray<string> {
+  return scores.map((value, index) => {
+    console.log(`>>> Assessment::createComponent(): index=${index}, value=${JSON.stringify(value)}`);
     const percentage = toPercentage(value.current / value.total);
     const stageName = getStageName(percentage, language);
-    results.push(`${key} : ${value.current} / ${value.total} : ${percentage}%: ${stageName}`);
+    return `${value.area}: ${value.current} / ${value.total} : ${percentage}%: ${stageName}`;
   });
-  return results;
 }
 
 const toPercentage = (value: number): number => Math.round(value * 100);

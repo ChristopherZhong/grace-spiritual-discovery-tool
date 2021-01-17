@@ -7,7 +7,7 @@ export interface AreaScore {
   total: number
 }
 
-export function computeScores(questions: ReadonlyArray<Question>): ReadonlyMap<QuestionType, AreaScore> {
+export function computeScores(questions: ReadonlyArray<Question>): ReadonlyArray<AreaScore> {
   const map = new Map<QuestionType, AreaScore>();
   questions.forEach((question) => {
     const score = map.get(question.type) ?? { area: question.type, current: 0, total: 0 };
@@ -15,5 +15,5 @@ export function computeScores(questions: ReadonlyArray<Question>): ReadonlyMap<Q
     score.total += question.choices.reduce((max, choice) => Math.max(max, choice.points), 0);
     map.set(question.type, score);
   });
-  return map;
+  return Array.from(map.values());
 }

@@ -1,10 +1,9 @@
 import { Button } from '@material-ui/core';
 import { Email } from '@material-ui/icons';
-import { QuestionType } from '../../types/QuestionType';
 import { AreaScore } from '../../types/AreaScore';
 
 export interface EmailAssessmentButtonProps {
-  scores: ReadonlyMap<QuestionType, AreaScore>
+  readonly scores: ReadonlyArray<AreaScore>
 }
 
 function mailto(
