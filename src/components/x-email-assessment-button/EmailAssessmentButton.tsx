@@ -1,6 +1,7 @@
 import { Button } from '@material-ui/core';
 import { Email } from '@material-ui/icons';
-import { AreaScore } from '../../types/AreaScore';
+import { AreaResult } from '../../types/AreaResult';
+import { getText } from '../../types/MultilingualText';
 
 function mailto(
   body: string,
@@ -10,16 +11,22 @@ function mailto(
 }
 
 export interface EmailAssessmentButtonProps {
-  readonly scores: ReadonlyArray<AreaScore>
+  readonly language: string
+  readonly results: ReadonlyArray<AreaResult>
 }
 
 export function EmailAssessmentButton(props: EmailAssessmentButtonProps) {
-  const { scores } = props;
-  scores.map((score) => `${score.area} : ${score}`);
+  const { language, results } = props;
+  const s = results.map((result) => {
+    const [id, idFound] = getText(result.stage.id, language);
+    const [name, nameFound] = getText(result.stage.name, language);
+    return `${result.area} : ${idFound ? '' : '*'}${id}: ${nameFound ? '' : '*'}${name}`;
+  });
+  const body = `Here is the assessment from the Grace Spiritual Discovery Tool.\n- ${s.join('\n- ')}`;
   return (
     <Button
       href={mailto(
-        'Here is the assessment from the Grace Spiritual Discovery Tool.\nabc\nabc',
+        body,
         'Grace Spiritual Discovery Tool - Assessment',
       )}
       rel='noopener noreferrer'

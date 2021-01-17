@@ -37,7 +37,7 @@ export function Assessment(props: AssessmentProps): JSX.Element {
         {stages.map((stage, index) => <StageInfo key={index} language={language} stage={stage}/>)}
       </CardContent>
       <CardActions>
-        <EmailAssessmentButton scores={scores}/>
+        <EmailAssessmentButton language={language} results={results}/>
       </CardActions>
     </Card>
   );
