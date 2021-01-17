@@ -4,6 +4,7 @@ import { Question } from '../../types/Question';
 import { loadStages } from '../../types/Stage';
 import { getText } from '../../types/MultilingualText';
 import { StageInfo } from '../x-stage-info/StageInfo';
+import { EmailAssessmentButton } from '../x-email-assessment-button/EmailAssessmentButton';
 
 export interface ResultsProps {
   language: string
@@ -65,6 +66,9 @@ export function Assessment(props: ResultsProps): JSX.Element {
         </ol>
         {stages.map((stage, index) => <StageInfo key={index} language={language} stage={stage}/>)}
       </CardContent>
+      <CardActions>
+        <EmailAssessmentButton/>
+      </CardActions>
     </Card>
   );
 }
