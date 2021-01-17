@@ -12,7 +12,7 @@ export interface ChoiceProps {
 export function Choice(props: ChoiceProps): JSX.Element {
   const [text, found] = getText(props.choice.text, props.language);
   const label = <Typography variant='body2'>{found ? '' : '*'}{text}</Typography>;
-  const labelPlacement = props.labelPlacement?? 'top';
+  const labelPlacement = props.labelPlacement ?? 'top';
   const value = `${props.choice.points}`;
   return (
     <FormControlLabel
