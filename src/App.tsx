@@ -14,8 +14,7 @@ function App() {
   const [state, setState] = useState(questions);
 
   const handleChange: UpdateAnswerHandler = (question: Question, value: number) => {
-    console.log(`>>> Questions::handleChange() : question=${JSON.stringify(question)}`);
-    console.log(`>>> Questions::handleChange() : value=${value}`);
+    console.debug(`>>> App::handleChange() : value=${value}, question=${JSON.stringify(question)}`);
     setState((prevQuestions) => {
       return prevQuestions.map((value1) => {
         const copy = { ...value1 };
