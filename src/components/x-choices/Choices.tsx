@@ -12,6 +12,7 @@ export interface ChoicesProps {
 
 export function Choices(props: ChoicesProps): JSX.Element {
   const { handleChange, language, question } = props;
+  let row = false;
   return (
     <RadioGroup
       aria-label='choices'
@@ -21,7 +22,7 @@ export function Choices(props: ChoicesProps): JSX.Element {
         console.debug(`>>> Choices::onChange(): question.index=${question.index} : ${value}`);
         handleChange(question, value);
       }}
-      row
+      row={row}
     >
       {question.choices.map((choice, index) => {
         return (
@@ -29,6 +30,7 @@ export function Choices(props: ChoicesProps): JSX.Element {
             choice={choice}
             index={index}
             key={index}
+            labelPlacement={row ? 'top' : 'end'}
             language={language}
           />
         );

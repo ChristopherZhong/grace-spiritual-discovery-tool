@@ -5,14 +5,14 @@ import { FormControlLabel, Radio, Typography } from '@material-ui/core';
 export interface ChoiceProps {
   readonly choice: IChoice;
   readonly index: number;
-  readonly labelPlacement?: 'end' | 'start' | 'top' | 'bottom';
+  readonly labelPlacement: 'end' | 'start' | 'top' | 'bottom';
   readonly language: string;
 }
 
 export function Choice(props: ChoiceProps): JSX.Element {
   const [text, found] = getText(props.choice.text, props.language);
   const label = <Typography variant='body2'>{found ? '' : '*'}{text}</Typography>;
-  const labelPlacement = props.labelPlacement ?? 'top';
+  const labelPlacement = props.labelPlacement;
   const value = `${props.choice.points}`;
   return (
     <FormControlLabel
