@@ -6,6 +6,7 @@ import { Assessment } from './components/x-assessment/Assessment';
 import { UpdateAnswerHandler } from './types/UpdateAnswerHandler';
 import { Question } from './types/Question';
 import { loadQuestions } from './types/RawQuestion';
+import { TopBar } from './components/x-topbar/TopBar';
 
 const questions = loadQuestions();
 
@@ -29,6 +30,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <TopBar/>
         Grace Spiritual Discovery Tool
       </header>
       <Container>
