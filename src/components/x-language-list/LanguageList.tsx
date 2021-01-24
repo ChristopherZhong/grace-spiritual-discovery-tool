@@ -1,5 +1,6 @@
-import { createStyles, FormControl, makeStyles, MenuItem, Select, Theme } from '@material-ui/core';
+import { FormControl, MenuItem, Select } from '@material-ui/core';
 import React, { ChangeEvent, useEffect, useState } from 'react';
+import { useStyles } from './LanguageList.styles';
 
 const defaultLanguageOption = {
   code: 'en',
@@ -14,13 +15,6 @@ const languageOptions = [
   },
 ];
 
-const useStyles = makeStyles((theme: Theme) => createStyles({
-    formControl: {
-      margin: theme.spacing(1),
-    },
-  }),
-);
-
 export function LanguageList(): JSX.Element {
   const classes = useStyles();
   const [language, setLanguage] = useState<string>(localStorage.getItem('language') || defaultLanguageOption.code);
@@ -28,9 +22,9 @@ export function LanguageList(): JSX.Element {
   useEffect(() => { localStorage.setItem('language', language); }, [language]);
 
   return (
-    <FormControl
-      className={classes.formControl}>
+    <FormControl className={classes.formControl}>
       <Select
+        className={classes.select}
         id='language-select'
         onChange={handleChange}
         value={language}
