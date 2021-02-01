@@ -1,8 +1,9 @@
 import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
 import { Question as IQuestion } from '../../types/Question';
-import { Card, CardActionArea, CardActions, CardContent, CardHeader, FormControl, FormLabel } from '@material-ui/core';
+import { Card, CardActions, CardContent, CardHeader, Divider, FormControl, FormLabel } from '@material-ui/core';
 import { getText } from '../../types/MultilingualText';
 import { Choices } from '../x-choices/Choices';
+import { useStyles } from './Question.styles';
 
 export interface QuestionProps {
   readonly handleChange: UpdateAnswerHandler;
@@ -11,16 +12,27 @@ export interface QuestionProps {
 }
 
 export function Question(props: QuestionProps): JSX.Element {
+  const classes = useStyles();
   const { handleChange, language, question } = props;
   const [text, found] = getText(question.text, language);
   return (
-    <Card>
-      <CardHeader title={`Question ${question.index}.`}/>
-      <FormControl required>
+    <Card className={classes.card}>
+      <CardHeader
+        className={classes.cardHeader}
+        title={`Question ${question.index}`}
+        titleTypographyProps={{
+          className: classes.cardHeaderTitle,
+          color: 'textSecondary',
+          variant: 'body2',
+          size: 'small',
+        }}
+      />
+      <FormControl className={classes.formControl} component='fieldset' required>
         <CardContent>
-          <FormLabel required>{found ? '' : '*'}{text}</FormLabel>
+          <FormLabel className={classes.formLabel} component='legend' required>{found ? '' : '*'}{text}</FormLabel>
         </CardContent>
-        <CardActionArea>
+        <CardContent><Divider/></CardContent>
+        <CardContent>
           <CardActions>
             <Choices
               language={language}
@@ -28,7 +40,7 @@ export function Question(props: QuestionProps): JSX.Element {
               question={question}
             />
           </CardActions>
-        </CardActionArea>
+        </CardContent>
       </FormControl>
     </Card>
   );
