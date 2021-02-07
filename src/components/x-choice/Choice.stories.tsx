@@ -32,9 +32,3 @@ MissingLanguage.args = {
   ...Default.args,
   language: 'es',
 };
-
-export const LabelPlacementBottom = Template.bind({});
-LabelPlacementBottom.args = {
-  ...Default.args,
-  labelPlacement: 'bottom',
-};
