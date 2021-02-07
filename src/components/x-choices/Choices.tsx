@@ -3,6 +3,7 @@ import { ChangeEvent } from 'react';
 import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
 import { Choice } from '../x-choice/Choice';
 import { Question } from '../../types/Question';
+import { useStyles } from './Choices.styles';
 
 export interface ChoicesProps {
   readonly handleChange: UpdateAnswerHandler;
@@ -12,10 +13,12 @@ export interface ChoicesProps {
 
 export function Choices(props: ChoicesProps): JSX.Element {
   const { handleChange, language, question } = props;
+  const classes = useStyles();
   let row = false;
   return (
     <RadioGroup
       aria-label='choices'
+      className={classes.radioGroup}
       name='choices'
       onChange={(event: ChangeEvent<HTMLInputElement>) => {
         const value: number = Number(event.target.value);
