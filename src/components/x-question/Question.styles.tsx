@@ -9,14 +9,11 @@ export const useStyles = makeStyles((theme: Theme) =>
       textAlign: 'start',
       textTransform: 'uppercase',
     },
-    formControl: {
-      width: '100%',
-    },
+    formControl: {},
     formLabel: {
       fontSize: 'x-large',
       fontWeight: 'lighter',
       textAlign: 'start',
-      marginBottom: theme.spacing(2),
     },
   }),
 );
