@@ -9,8 +9,7 @@ export interface QuestionsProps {
   readonly questions: ReadonlyArray<IQuestion>;
 }
 
-export function Questions(props: QuestionsProps): JSX.Element {
-  const { handleChange, language, questions } = props;
+export function Questions({ handleChange, language, questions }: QuestionsProps): JSX.Element {
   return (
     <Grid
       alignItems='stretch'
