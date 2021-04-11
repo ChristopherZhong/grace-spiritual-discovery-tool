@@ -7,11 +7,10 @@ import { useStyles } from './Choices.styles';
 
 export interface ChoicesProps {
   readonly handleChange: UpdateAnswerHandler;
-  readonly language: string;
   readonly question: Question;
 }
 
-export function Choices({ handleChange, language, question }: ChoicesProps): JSX.Element {
+export function Choices({ handleChange, question }: ChoicesProps): JSX.Element {
   const classes = useStyles();
   return (
     <RadioGroup
@@ -30,7 +29,6 @@ export function Choices({ handleChange, language, question }: ChoicesProps): JSX
             choice={choice}
             index={index}
             key={index}
-            language={language}
           />
         );
       })}
