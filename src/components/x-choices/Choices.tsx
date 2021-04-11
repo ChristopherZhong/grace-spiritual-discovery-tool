@@ -11,8 +11,7 @@ export interface ChoicesProps {
   readonly question: Question;
 }
 
-export function Choices(props: ChoicesProps): JSX.Element {
-  const { handleChange, language, question } = props;
+export function Choices({ handleChange, language, question }: ChoicesProps): JSX.Element {
   const classes = useStyles();
   return (
     <RadioGroup
