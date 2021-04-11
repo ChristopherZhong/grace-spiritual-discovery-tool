@@ -22,8 +22,7 @@ export interface AssessmentProps {
   readonly questions: ReadonlyArray<Question>;
 }
 
-export function Assessment(props: AssessmentProps): JSX.Element {
-  const { language, questions } = props;
+export function Assessment({ language, questions }: AssessmentProps): JSX.Element {
   const scores = computeScores(questions);
   const results = finalizeResults(scores, stages);
   const components = createComponent(results, language);
