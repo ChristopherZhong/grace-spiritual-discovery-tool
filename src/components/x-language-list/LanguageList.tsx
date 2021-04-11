@@ -1,19 +1,7 @@
 import { FormControl, MenuItem, Select } from '@material-ui/core';
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useStyles } from './LanguageList.styles';
-
-const defaultLanguageOption = {
-  code: 'en',
-  text: 'English',
-};
-
-const languageOptions = [
-  defaultLanguageOption,
-  {
-    code: 'zh',
-    text: '中文',
-  },
-];
+import { languageOptions } from '../../contexts/language';
 
 export function LanguageList(): JSX.Element {
   const classes = useStyles();

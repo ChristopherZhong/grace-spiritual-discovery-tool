@@ -1,3 +1,16 @@
 import { createContext } from 'react';
 
-const LanguageContext = createContext<string|undefined>(undefined)
+const defaultLanguageOption = {
+  code: 'en',
+  text: 'English',
+};
+
+export const languageOptions = [
+  defaultLanguageOption,
+  {
+    code: 'zh',
+    text: '中文',
+  },
+];
+
+const LanguageContext = createContext<string | undefined>(undefined);
