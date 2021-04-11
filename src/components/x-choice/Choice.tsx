@@ -8,8 +8,7 @@ export interface ChoiceProps {
   readonly language: string;
 }
 
-export function Choice(props: ChoiceProps): JSX.Element {
-  const { choice, index, language } = props;
+export function Choice({ choice, index, language }: ChoiceProps): JSX.Element {
   const [text, found] = getText(choice.text, language);
   const label = <Typography variant='body2'>{found ? '' : '*'}{text}</Typography>;
   const value = `${choice.points}`;
