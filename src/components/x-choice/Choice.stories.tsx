@@ -18,17 +18,14 @@ Default.args = {
     },
   },
   index: 1,
-  language: 'en',
 };
 
 export const ChineseLanguage = Template.bind({});
 ChineseLanguage.args = {
   ...Default.args,
-  language: 'zh',
 };
 
 export const MissingLanguage = Template.bind({});
 MissingLanguage.args = {
   ...Default.args,
-  language: 'es',
 };
