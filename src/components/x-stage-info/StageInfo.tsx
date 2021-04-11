@@ -7,8 +7,7 @@ export interface StageInfoProps {
   readonly stage: Stage
 }
 
-export function StageInfo(props: StageInfoProps): JSX.Element {
-  const { language, stage } = props;
+export function StageInfo({ language, stage }: StageInfoProps): JSX.Element {
   const [id, foundId] = getText(stage.id, language);
   const [description, foundDescription] = getText(stage.description, language);
   const [name, foundName] = getText(stage.name, language);
