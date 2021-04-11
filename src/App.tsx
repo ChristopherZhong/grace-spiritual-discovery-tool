@@ -7,11 +7,11 @@ import { UpdateAnswerHandler } from './types/UpdateAnswerHandler';
 import { Question } from './types/Question';
 import { loadQuestions } from './types/RawQuestion';
 import { TopBar } from './components/x-topbar/TopBar';
+import { LanguageProvider } from './contexts/language';
 
 const questions = loadQuestions();
 
 function App() {
-  const [language] = useState('en');
   const [state, setState] = useState(questions);
 
   const handleChange: UpdateAnswerHandler = (question: Question, value: number) => {
@@ -28,24 +28,19 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <TopBar/>
-        Grace Spiritual Discovery Tool
-      </header>
-      <Container>
-        <Typography>Questions</Typography>
-        <Questions
-          handleChange={handleChange}
-          language={language}
-          questions={state}
-        />
-        <Assessment
-          language={language}
-          questions={state}
-        />
-      </Container>
-    </div>
+    <LanguageProvider>
+      <div className="App">
+        <header className="App-header">
+          <TopBar/>
+          Grace Spiritual Discovery Tool
+        </header>
+        <Container>
+          <Typography>Questions</Typography>
+          <Questions handleChange={handleChange} questions={state}/>
+          <Assessment questions={state}/>
+        </Container>
+      </div>
+    </LanguageProvider>
   );
 }
 
