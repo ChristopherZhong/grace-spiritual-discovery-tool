@@ -1,12 +1,12 @@
 import { createContext } from 'react';
 
-const defaultLanguageOption = {
+const defaultLanguage = {
   code: 'en',
   text: 'English',
 };
 
-export const languageOptions = [
-  defaultLanguageOption,
+export const languages = [
+  defaultLanguage,
   {
     code: 'zh',
     text: '中文',

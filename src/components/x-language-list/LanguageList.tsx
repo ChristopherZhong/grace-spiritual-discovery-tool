@@ -1,7 +1,7 @@
 import { FormControl, MenuItem, Select } from '@material-ui/core';
 import React, { ChangeEvent, useEffect, useState } from 'react';
 import { useStyles } from './LanguageList.styles';
-import { languageOptions } from '../../contexts/language';
+import { languages } from '../../contexts/language';
 
 export function LanguageList(): JSX.Element {
   const classes = useStyles();
@@ -17,7 +17,7 @@ export function LanguageList(): JSX.Element {
         onChange={handleChange}
         value={language}
       >
-        {languageOptions.map((value) => (
+        {languages.map((value) => (
           <MenuItem key={value.code} value={value.code}>{value.text}</MenuItem>
         ))}
       </Select>
