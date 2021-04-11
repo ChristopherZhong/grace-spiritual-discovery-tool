@@ -15,8 +15,7 @@ export interface EmailAssessmentButtonProps {
   readonly results: ReadonlyArray<AreaResult>
 }
 
-export function EmailAssessmentButton(props: EmailAssessmentButtonProps) {
-  const { language, results } = props;
+export function EmailAssessmentButton({ language, results }: EmailAssessmentButtonProps) {
   const s = results.map((result) => {
     const [id, idFound] = getText(result.stage.id, language);
     const [name, nameFound] = getText(result.stage.name, language);
