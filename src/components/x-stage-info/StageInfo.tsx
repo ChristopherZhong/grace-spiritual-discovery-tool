@@ -1,17 +1,17 @@
 import { Card, CardContent, Typography } from '@material-ui/core';
 import { getText } from '../../types/MultilingualText';
 import { Stage } from '../../types/Stage';
+import { useLanguage } from '../../contexts/language';
 
 export interface StageInfoProps {
-  readonly language: string
   readonly stage: Stage
 }
 
-export function StageInfo(props: StageInfoProps): JSX.Element {
-  const { language, stage } = props;
-  const [id, foundId] = getText(stage.id, language);
-  const [description, foundDescription] = getText(stage.description, language);
-  const [name, foundName] = getText(stage.name, language);
+export function StageInfo({ stage }: StageInfoProps): JSX.Element {
+  const { language } = useLanguage();
+  const [id, foundId] = getText(stage.id, language.code);
+  const [description, foundDescription] = getText(stage.description, language.code);
+  const [name, foundName] = getText(stage.name, language.code);
   return (
     <Card variant='outlined'>
       <CardContent>

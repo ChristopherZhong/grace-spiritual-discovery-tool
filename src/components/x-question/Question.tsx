@@ -4,17 +4,17 @@ import { Card, CardActions, CardContent, CardHeader, Divider, FormControl, FormL
 import { getText } from '../../types/MultilingualText';
 import { Choices } from '../x-choices/Choices';
 import { useStyles } from './Question.styles';
+import { useLanguage } from '../../contexts/language';
 
 export interface QuestionProps {
   readonly handleChange: UpdateAnswerHandler;
-  readonly language: string;
   readonly question: IQuestion;
 }
 
-export function Question(props: QuestionProps): JSX.Element {
+export function Question({ handleChange, question }: QuestionProps): JSX.Element {
   const classes = useStyles();
-  const { handleChange, language, question } = props;
-  const [text, found] = getText(question.text, language);
+  const {language} = useLanguage();
+  const [text, found] = getText(question.text, language.code);
   return (
     <Card className={classes.card}>
       <CardHeader
@@ -35,7 +35,6 @@ export function Question(props: QuestionProps): JSX.Element {
         <CardContent>
           <CardActions>
             <Choices
-              language={language}
               handleChange={handleChange}
               question={question}
             />

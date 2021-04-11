@@ -5,12 +5,10 @@ import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
 
 export interface QuestionsProps {
   readonly handleChange: UpdateAnswerHandler;
-  readonly language: string;
   readonly questions: ReadonlyArray<IQuestion>;
 }
 
-export function Questions(props: QuestionsProps): JSX.Element {
-  const { handleChange, language, questions } = props;
+export function Questions({ handleChange, questions }: QuestionsProps): JSX.Element {
   return (
     <Grid
       alignItems='stretch'
@@ -24,7 +22,6 @@ export function Questions(props: QuestionsProps): JSX.Element {
           <Question
             handleChange={handleChange}
             key={question.index}
-            language={language}
             question={question}
           />
         </Grid>)}

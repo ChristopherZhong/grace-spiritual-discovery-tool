@@ -10,7 +10,6 @@ const Template: Story<StageInfoProps> = (args) => <StageInfo {...args}/>;
 
 export const Default = Template.bind({});
 Default.args = {
-  language: 'en',
   stage: {
     description: {
       'en': 'English description',
@@ -34,11 +33,9 @@ Default.args = {
 export const ChineseLanguage = Template.bind({});
 ChineseLanguage.args = {
   ...Default.args,
-  language: 'zh',
 };
 
 export const MissingLanguage = Template.bind({});
 MissingLanguage.args = {
   ...Default.args,
-  language: 'es',
 };

@@ -1,25 +1,12 @@
 import { FormControl, MenuItem, Select } from '@material-ui/core';
-import React, { ChangeEvent, useEffect, useState } from 'react';
+import React, { ChangeEvent } from 'react';
 import { useStyles } from './LanguageList.styles';
-
-const defaultLanguageOption = {
-  code: 'en',
-  text: 'English',
-};
-
-const languageOptions = [
-  defaultLanguageOption,
-  {
-    code: 'zh',
-    text: '中文',
-  },
-];
+import { getLanguage, languages, useLanguage } from '../../contexts/language';
 
 export function LanguageList(): JSX.Element {
   const classes = useStyles();
-  const [language, setLanguage] = useState<string>(localStorage.getItem('language') || defaultLanguageOption.code);
-  const handleChange = (event: ChangeEvent<{ value: unknown }>) => { setLanguage(event.target.value as string); };
-  useEffect(() => { localStorage.setItem('language', language); }, [language]);
+  const { language, setLanguage } = useLanguage();
+  const handleChange = (event: ChangeEvent<{ value: unknown }>) => { setLanguage(getLanguage(event.target.value)); };
 
   return (
     <FormControl className={classes.formControl}>
@@ -27,9 +14,9 @@ export function LanguageList(): JSX.Element {
         className={classes.select}
         id='language-select'
         onChange={handleChange}
-        value={language}
+        value={language.code}
       >
-        {languageOptions.map((value) => (
+        {languages.map((value) => (
           <MenuItem key={value.code} value={value.code}>{value.text}</MenuItem>
         ))}
       </Select>

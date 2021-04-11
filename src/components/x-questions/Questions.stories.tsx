@@ -12,7 +12,6 @@ const Template: Story<QuestionsProps> = (args) => <Questions {...args}/>;
 export const Default = Template.bind({});
 Default.args = {
   handleChange: () => {},
-  language: 'en',
   questions: [
     {
       answer: 0,
@@ -116,11 +115,9 @@ Default.args = {
 export const ChineseLanguage = Template.bind({});
 ChineseLanguage.args = {
   ...Default.args,
-  language: 'zh',
 };
 
 export const MissingLanguage = Template.bind({});
 MissingLanguage.args = {
   ...Default.args,
-  language: 'es',
 };

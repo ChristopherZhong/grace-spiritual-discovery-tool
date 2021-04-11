@@ -6,6 +6,7 @@ import { StageInfo } from '../x-stage-info/StageInfo';
 import { EmailAssessmentButton } from '../x-email-assessment-button/EmailAssessmentButton';
 import { computeScores } from '../../types/AreaScore';
 import { AreaResult, finalizeResults } from '../../types/AreaResult';
+import { useLanguage } from '../../contexts/language';
 
 const stages = loadStages();
 
@@ -18,15 +19,14 @@ function createComponent(results: ReadonlyArray<AreaResult>, language: string): 
 }
 
 export interface AssessmentProps {
-  readonly language: string
   readonly questions: ReadonlyArray<Question>;
 }
 
-export function Assessment(props: AssessmentProps): JSX.Element {
-  const { language, questions } = props;
+export function Assessment({ questions }: AssessmentProps): JSX.Element {
+  const { language } = useLanguage();
   const scores = computeScores(questions);
   const results = finalizeResults(scores, stages);
-  const components = createComponent(results, language);
+  const components = createComponent(results, language.code);
   return (
     <Card>
       <CardHeader title='Assessment Results'/>
@@ -34,10 +34,10 @@ export function Assessment(props: AssessmentProps): JSX.Element {
         <ol>
           {components.map((value, index) => <li key={index}>{value}</li>)}
         </ol>
-        {stages.map((stage, index) => <StageInfo key={index} language={language} stage={stage}/>)}
+        {stages.map((stage, index) => <StageInfo key={index} stage={stage}/>)}
       </CardContent>
       <CardActions>
-        <EmailAssessmentButton language={language} results={results}/>
+        <EmailAssessmentButton results={results}/>
       </CardActions>
     </Card>
   );

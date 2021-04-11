@@ -2,6 +2,7 @@ import { Button } from '@material-ui/core';
 import { Email } from '@material-ui/icons';
 import { AreaResult } from '../../types/AreaResult';
 import { getText } from '../../types/MultilingualText';
+import { useLanguage } from '../../contexts/language';
 
 function mailto(
   body: string,
@@ -11,15 +12,14 @@ function mailto(
 }
 
 export interface EmailAssessmentButtonProps {
-  readonly language: string
   readonly results: ReadonlyArray<AreaResult>
 }
 
-export function EmailAssessmentButton(props: EmailAssessmentButtonProps) {
-  const { language, results } = props;
+export function EmailAssessmentButton({ results }: EmailAssessmentButtonProps) {
+  const { language } = useLanguage();
   const s = results.map((result) => {
-    const [id, idFound] = getText(result.stage.id, language);
-    const [name, nameFound] = getText(result.stage.name, language);
+    const [id, idFound] = getText(result.stage.id, language.code);
+    const [name, nameFound] = getText(result.stage.name, language.code);
     return `${result.area} : ${idFound ? '' : '*'}${id}: ${nameFound ? '' : '*'}${name}`;
   });
   const body = `Here is the assessment from the Grace Spiritual Discovery Tool.\n- ${s.join('\n- ')}`;
