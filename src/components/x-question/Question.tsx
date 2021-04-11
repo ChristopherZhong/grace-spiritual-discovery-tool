@@ -11,9 +11,8 @@ export interface QuestionProps {
   readonly question: IQuestion;
 }
 
-export function Question(props: QuestionProps): JSX.Element {
+export function Question({ handleChange, language, question }: QuestionProps): JSX.Element {
   const classes = useStyles();
-  const { handleChange, language, question } = props;
   const [text, found] = getText(question.text, language);
   return (
     <Card className={classes.card}>
