@@ -6,8 +6,8 @@ import { Assessment } from './components/x-assessment/Assessment';
 import { UpdateAnswerHandler } from './types/UpdateAnswerHandler';
 import { Question } from './types/Question';
 import { loadQuestions } from './types/RawQuestion';
-import { TopBar } from './components/x-topbar/TopBar';
 import { LanguageProvider } from './contexts/language';
+import { Header } from './components/x-header/Header';
 
 const questions = loadQuestions();
 
@@ -30,14 +30,11 @@ function App(): JSX.Element {
   return (
     <LanguageProvider>
       <div className="App">
-        <header className="App-header">
-          <TopBar/>
-          Grace Spiritual Discovery Tool
-        </header>
+        <Header />
         <Container>
           <Typography>Questions</Typography>
-          <Questions handleChange={handleChange} questions={state}/>
-          <Assessment questions={state}/>
+          <Questions handleChange={handleChange} questions={state} />
+          <Assessment questions={state} />
         </Container>
       </div>
     </LanguageProvider>
