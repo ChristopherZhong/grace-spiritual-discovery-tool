@@ -11,7 +11,7 @@ import { LanguageProvider } from './contexts/language';
 
 const questions = loadQuestions();
 
-function App() {
+function App(): JSX.Element {
   const [state, setState] = useState(questions);
 
   const handleChange: UpdateAnswerHandler = (question: Question, value: number) => {
