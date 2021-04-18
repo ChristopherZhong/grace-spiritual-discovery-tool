@@ -1,0 +1,4 @@
+# JavaScript / TypeScript files
+'*.(j|t)s(x)?':
+  - eslint --fix
+  - prettier --write
