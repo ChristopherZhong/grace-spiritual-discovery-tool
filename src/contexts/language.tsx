@@ -26,7 +26,7 @@ interface LanguageProviderProps {
   children: ReactNode
 }
 
-export function LanguageProvider({ children }: LanguageProviderProps) {
+export function LanguageProvider({ children }: LanguageProviderProps): JSX.Element {
   const [language, setLanguage] = useState(getLanguage(localStorage.getItem('language')));
   const value = { language, setLanguage };
   useEffect(() => { localStorage.setItem('language', language.code); }, [language]);
@@ -37,9 +37,14 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   );
 }
 
-const LanguageContext = createContext<{ language: Language, setLanguage: Dispatch<SetStateAction<Language>> } | undefined>(undefined);
+interface LanguageContextType {
+  language: Language;
+  setLanguage: Dispatch<SetStateAction<Language>>;
+}
 
-export function useLanguage() {
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+
+export function useLanguage(): LanguageContextType {
   const context = useContext(LanguageContext);
   if (context === undefined) {
     throw new Error('useLanguage must be used within a LanguageProvider');

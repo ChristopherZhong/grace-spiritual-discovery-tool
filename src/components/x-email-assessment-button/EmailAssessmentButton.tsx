@@ -16,7 +16,7 @@ export interface EmailAssessmentButtonProps {
   readonly results: ReadonlyArray<AreaResult>
 }
 
-export function EmailAssessmentButton({ results }: EmailAssessmentButtonProps) {
+export function EmailAssessmentButton({ results }: EmailAssessmentButtonProps): JSX.Element {
   const { language } = useLanguage();
   const s = results.map((result) => {
     const [id, idFound] = getText(result.stage.id, language.code);
