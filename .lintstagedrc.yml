@@ -1,0 +1,8 @@
+# JavaScript / TypeScript files
+'*.(j|t)s(x)?':
+  - eslint --fix
+  - prettier --write
+'*.{css,html,json,md,yml,yaml}':
+  - prettier --write
+'!*.(j|t)s(x)?':
+  - prettier --check
