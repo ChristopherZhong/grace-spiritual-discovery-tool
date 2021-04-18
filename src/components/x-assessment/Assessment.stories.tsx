@@ -1,13 +1,13 @@
+import React from 'react';
 import { Meta, Story } from '@storybook/react/types-6-0';
 import { Assessment, AssessmentProps } from './Assessment';
-import { QuestionType } from '../../types/QuestionType';
 
 export default {
   component: Assessment,
   title: 'Assessment',
 } as Meta;
 
-const Template: Story<AssessmentProps> = (args) => <Assessment {...args}/>;
+const Template: Story<AssessmentProps> = (args) => <Assessment {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -26,7 +26,7 @@ Default.args = {
       ],
       index: 1,
       text: {},
-      type: QuestionType.Walk,
+      type: 'WALK',
     },
     {
       answer: 4,
@@ -46,7 +46,7 @@ Default.args = {
       ],
       index: 2,
       text: {},
-      type: QuestionType.Know,
+      type: 'KNOW',
     },
     {
       answer: 2,
@@ -62,7 +62,7 @@ Default.args = {
       ],
       index: 3,
       text: {},
-      type: QuestionType.Serve,
+      type: 'SERVE',
     },
     {
       answer: 1,
@@ -78,7 +78,7 @@ Default.args = {
       ],
       index: 4,
       text: {},
-      type: QuestionType.Relate,
+      type: 'RELATE',
     },
     {
       answer: 1,
@@ -94,7 +94,7 @@ Default.args = {
       ],
       index: 5,
       text: {},
-      type: QuestionType.Share,
+      type: 'SHARE',
     },
     {
       answer: 2,
@@ -110,7 +110,7 @@ Default.args = {
       ],
       index: 6,
       text: {},
-      type: QuestionType.Walk,
+      type: 'WALK',
     },
     {
       answer: 6,
@@ -126,7 +126,7 @@ Default.args = {
       ],
       index: 7,
       text: {},
-      type: QuestionType.Know,
+      type: 'KNOW',
     },
   ],
 };
