@@ -2,3 +2,5 @@
 '*.(j|t)s(x)?':
   - eslint --fix
   - prettier --write
+'!*.(j|t)s(x)?':
+  - prettier --check
