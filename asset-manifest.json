@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/grace-spiritual-discovery-tool/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/grace-spiritual-discovery-tool/static/js/main.ecc9f557.chunk.js",
-    "main.js.map": "/grace-spiritual-discovery-tool/static/js/main.ecc9f557.chunk.js.map",
+    "main.js": "/grace-spiritual-discovery-tool/static/js/main.f642cb05.chunk.js",
+    "main.js.map": "/grace-spiritual-discovery-tool/static/js/main.f642cb05.chunk.js.map",
     "runtime-main.js": "/grace-spiritual-discovery-tool/static/js/runtime-main.e82014a5.js",
     "runtime-main.js.map": "/grace-spiritual-discovery-tool/static/js/runtime-main.e82014a5.js.map",
     "static/js/2.76880a1a.chunk.js": "/grace-spiritual-discovery-tool/static/js/2.76880a1a.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.e82014a5.js",
     "static/js/2.76880a1a.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.ecc9f557.chunk.js"
+    "static/js/main.f642cb05.chunk.js"
   ]
 }
