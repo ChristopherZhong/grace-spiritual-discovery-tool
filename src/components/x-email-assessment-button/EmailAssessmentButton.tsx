@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from '@material-ui/core';
 import { Email } from '@material-ui/icons';
 import { AreaResult } from '../../types/AreaResult';
@@ -15,7 +16,7 @@ export interface EmailAssessmentButtonProps {
   readonly results: ReadonlyArray<AreaResult>
 }
 
-export function EmailAssessmentButton({ results }: EmailAssessmentButtonProps) {
+export function EmailAssessmentButton({ results }: EmailAssessmentButtonProps): JSX.Element {
   const { language } = useLanguage();
   const s = results.map((result) => {
     const [id, idFound] = getText(result.stage.id, language.code);

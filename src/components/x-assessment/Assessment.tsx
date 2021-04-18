@@ -1,3 +1,4 @@
+import React from 'react';
 import { Card, CardActions, CardContent, CardHeader } from '@material-ui/core';
 import { Question } from '../../types/Question';
 import { loadStages } from '../../types/Stage';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
 import { Question as IQuestion } from '../../types/Question';
 import { Card, CardActions, CardContent, CardHeader, Divider, FormControl, FormLabel } from '@material-ui/core';

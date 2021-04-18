@@ -1,3 +1,4 @@
+import React from 'react';
 import { RadioGroup } from '@material-ui/core';
 import { ChangeEvent } from 'react';
 import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
@@ -18,7 +19,7 @@ export function Choices({ handleChange, question }: ChoicesProps): JSX.Element {
       className={classes.radioGroup}
       name='choices'
       onChange={(event: ChangeEvent<HTMLInputElement>) => {
-        const value: number = Number(event.target.value);
+        const value = Number(event.target.value);
         console.debug(`>>> Choices::onChange(): question.index=${question.index} : ${value}`);
         handleChange(question, value);
       }}
