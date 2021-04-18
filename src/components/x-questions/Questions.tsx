@@ -1,3 +1,4 @@
+import React from 'react';
 import { Grid } from '@material-ui/core';
 import { Question as IQuestion } from '../../types/Question';
 import { Question } from '../x-question/Question';

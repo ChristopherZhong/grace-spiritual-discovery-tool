@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from '@material-ui/core';
 import { Email } from '@material-ui/icons';
 import { AreaResult } from '../../types/AreaResult';
