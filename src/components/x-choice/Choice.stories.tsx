@@ -1,3 +1,4 @@
+import React from 'react';
 import { Choice, ChoiceProps } from './Choice';
 import { Meta, Story } from '@storybook/react/types-6-0';
 
@@ -13,8 +14,8 @@ Default.args = {
   choice: {
     points: 1,
     text: {
-      'en': 'English text',
-      'zh': 'Chinese text',
+      en: 'English text',
+      zh: 'Chinese text',
     },
   },
   index: 1,
