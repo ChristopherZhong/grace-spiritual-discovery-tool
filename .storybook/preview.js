@@ -28,6 +28,9 @@ const withLanguageProvider = (Story, context) => {
         language: {
             code: context.globals.language,
         },
+        setLanguage: () => {
+            // do nothing
+        },
     };
     return (
         <LanguageContext.Provider value={value}>
