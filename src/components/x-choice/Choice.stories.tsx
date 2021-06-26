@@ -20,13 +20,3 @@ Default.args = {
   },
   index: 1,
 };
-
-export const ChineseLanguage = Template.bind({});
-ChineseLanguage.args = {
-  ...Default.args,
-};
-
-export const MissingLanguage = Template.bind({});
-MissingLanguage.args = {
-  ...Default.args,
-};

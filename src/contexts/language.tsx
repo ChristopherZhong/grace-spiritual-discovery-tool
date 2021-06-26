@@ -18,23 +18,21 @@ export const languages = [
 export function getLanguage(code: string | unknown): Language {
   console.debug(`>>> getLanguage() : code=${code}`);
   const language = languages.find((value) => value.code === code) || defaultLanguage;
-  console.debug(`>>> getLanguage() : language=${JSON.stringify(language)}`)
+  console.debug(`>>> getLanguage() : language=${JSON.stringify(language)}`);
   return language;
 }
 
 interface LanguageProviderProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps): JSX.Element {
   const [language, setLanguage] = useState(getLanguage(localStorage.getItem('language')));
   const value = { language, setLanguage };
-  useEffect(() => { localStorage.setItem('language', language.code); }, [language]);
-  return (
-    <LanguageContext.Provider value={value}>
-      {children}
-    </LanguageContext.Provider>
-  );
+  useEffect(() => {
+    localStorage.setItem('language', language.code);
+  }, [language]);
+  return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }
 
 interface LanguageContextType {
@@ -42,7 +40,7 @@ interface LanguageContextType {
   setLanguage: Dispatch<SetStateAction<Language>>;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function useLanguage(): LanguageContextType {
   const context = useContext(LanguageContext);
