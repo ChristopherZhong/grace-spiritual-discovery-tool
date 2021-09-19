@@ -1,10 +1,9 @@
 import React from 'react';
 import { UpdateAnswerHandler } from '../../types/UpdateAnswerHandler';
 import { Question as IQuestion } from '../../types/Question';
-import { Card, CardActions, CardContent, CardHeader, Divider, FormControl, FormLabel } from '@material-ui/core';
+import { Card, CardActions, CardContent, CardHeader, Divider, FormControl, FormLabel } from '@mui/material';
 import { getText } from '../../types/MultilingualText';
 import { Choices } from '../x-choices/Choices';
-import { useStyles } from './Question.styles';
 import { useLanguage } from '../../contexts/language';
 
 export interface QuestionProps {
@@ -13,32 +12,36 @@ export interface QuestionProps {
 }
 
 export function Question({ handleChange, question }: QuestionProps): JSX.Element {
-  const classes = useStyles();
-  const {language} = useLanguage();
+  const { language } = useLanguage();
   const [text, found] = getText(question.text, language.code);
   return (
-    <Card className={classes.card}>
+    <Card>
       <CardHeader
-        className={classes.cardHeader}
         title={`Question ${question.index}`}
         titleTypographyProps={{
-          className: classes.cardHeaderTitle,
           color: 'textSecondary',
           variant: 'body2',
           size: 'small',
+          sx: { fontWeight: 'bold', textAlign: 'start', textTransform: 'uppercase' },
         }}
       />
-      <FormControl className={classes.formControl} component='fieldset' required>
+      <FormControl component="fieldset" required>
         <CardContent>
-          <FormLabel className={classes.formLabel} component='legend' required>{found ? '' : '*'}{text}</FormLabel>
+          <FormLabel
+            component="legend"
+            required
+            sx={{ fontSize: 'x-large', fontWeight: 'lighter', textAlign: 'start' }}
+          >
+            {found ? '' : '*'}
+            {text}
+          </FormLabel>
         </CardContent>
-        <CardContent><Divider/></CardContent>
+        <CardContent>
+          <Divider />
+        </CardContent>
         <CardContent>
           <CardActions>
-            <Choices
-              handleChange={handleChange}
-              question={question}
-            />
+            <Choices handleChange={handleChange} question={question} />
           </CardActions>
         </CardContent>
       </FormControl>
