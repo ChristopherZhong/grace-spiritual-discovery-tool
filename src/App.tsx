@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import { Questions } from './components/x-questions/Questions';
-import { Container, Typography } from '@material-ui/core';
+import { Container, Typography } from '@mui/material';
 import { Assessment } from './components/x-assessment/Assessment';
 import { UpdateAnswerHandler } from './types/UpdateAnswerHandler';
 import { Question } from './types/Question';

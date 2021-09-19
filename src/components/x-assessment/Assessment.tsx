@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardActions, CardContent, CardHeader } from '@material-ui/core';
+import { Card, CardActions, CardContent, CardHeader } from '@mui/material';
 import { Question } from '../../types/Question';
 import { loadStages } from '../../types/Stage';
 import { getText } from '../../types/MultilingualText';
@@ -30,15 +30,19 @@ export function Assessment({ questions }: AssessmentProps): JSX.Element {
   const components = createComponent(results, language.code);
   return (
     <Card>
-      <CardHeader title='Assessment Results'/>
+      <CardHeader title="Assessment Results" />
       <CardContent>
         <ol>
-          {components.map((value, index) => <li key={index}>{value}</li>)}
+          {components.map((value, index) => (
+            <li key={index}>{value}</li>
+          ))}
         </ol>
-        {stages.map((stage, index) => <StageInfo key={index} stage={stage}/>)}
+        {stages.map((stage, index) => (
+          <StageInfo key={index} stage={stage} />
+        ))}
       </CardContent>
       <CardActions>
-        <EmailAssessmentButton results={results}/>
+        <EmailAssessmentButton results={results} />
       </CardActions>
     </Card>
   );
