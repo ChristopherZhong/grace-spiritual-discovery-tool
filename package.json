@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://christopherzhong.github.io/grace-spiritual-discovery-tool/",
   "dependencies": {
-    "@emotion/react": "^11.4.1",
+    "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.3.0",
     "@mui/icons-material": "^5.0.3",
     "@mui/material": "^5.0.3",
